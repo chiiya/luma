@@ -1,0 +1,394 @@
+//
+//--------------------------------------------------------------------------
+// Forms - Luma
+//--------------------------------------------------------------------------
+//
+
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid transparent-dark(.15);
+  border-radius: .3rem;
+  box-shadow: none;
+  box-sizing: inherit;
+  color: $color-text;
+  font-family: inherit;
+  font-size: 1.5rem;
+  height: 3.8rem;
+  padding: .6rem 1rem;
+  width: 100%;
+
+  &:focus {
+    border-color: shade($color-light, 20%);
+    outline: 0;
+  }
+
+  &::-webkit-input-placeholder {
+    // Chrome/Opera/Safari
+    font-weight: 300;
+  }
+
+  &::-moz-placeholder {
+    // Firefox 19
+    font-weight: 300;
+  }
+
+  &::-ms-input-placeholder {
+    // IE 10
+    font-weight: 300;
+  }
+
+  &::-moz-placeholder {
+    // Firefox 18-
+    font-weight: 300;
+  }
+
+  &:disabled {
+    background-color: transparent-dark(.03);
+    cursor: not-allowed;
+  }
+}
+
+textarea {
+  min-height: 10rem;
+  overflow: hidden;
+  resize: none;
+}
+
+label,
+legend {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+// Checkboxes
+// Basically with slight adjustments from materializecss.com
+//-------------------------------------
+input[type='checkbox'] {
+  &:checked,
+  &:not(:checked) {
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+  }
+
+  &:checked+label {
+    &::before {
+      backface-visibility: hidden;
+      border-bottom: 2px solid $color-checkmark;
+      border-left: 2px solid transparent;
+      border-right: 2px solid $color-checkmark;
+      border-top: 2px solid transparent;
+      height: 10px;
+      left: 1px;
+      top: 4px;
+      transform: rotateZ(37deg);
+      transform-origin: 100% 100%;
+      width: 6px;
+    }
+
+    &::after {
+      background-color: $color-checkbox;
+      border: 2px solid $color-checkbox;
+      height: 15px;
+      top: 4px;
+      width: 15px;
+      z-index: 0;
+    }
+  }
+
+  &:not(:checked)+label {
+    &::before {
+      border: 3px solid transparent;
+      height: 0;
+      left: 6px;
+      top: 10px;
+      transform: rotateZ(37deg);
+      transform-origin: 100% 100%;
+      width: 0;
+    }
+
+    &::after {
+      background-color: transparent;
+      border: 1px solid shade($color-light, 20%);
+      height: 15px;
+      top: 4px;
+      width: 15px;
+      z-index: 0;
+    }
+  }
+
+  +label {
+    color: $color-text;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 300;
+    height: 25px;
+    margin-bottom: 0;
+    padding-left: 35px;
+    position: relative;
+    user-select: none;
+
+    &::before {
+      border-radius: 1px;
+      content: '';
+      margin-top: 2px;
+      position: absolute;
+      transition: .2s;
+      z-index: 0;
+    }
+
+    &::after {
+      border-radius: 2px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      left: 0;
+      position: absolute;
+      transition: border .15s, background-color .25s, width .2s .1s, height .2s .1s, top .2s .1s, left .2s .1s;
+      z-index: 1;
+    }
+  }
+
+  &:disabled {
+    +label {
+      color: tint($color-text, 20%);
+      cursor: not-allowed;
+    }
+
+    &:checked+label {
+      &::before {
+        background-color: transparent;
+        border-bottom: 2px solid transparent-dark(.26);
+        border-right: 2px solid transparent-dark(.26);
+      }
+
+      &::after {
+        background-color: $color-light;
+        border-color: $color-light;
+      }
+    }
+
+    &:not(:checked)+label {
+      &::before {
+        background-color: transparent;
+        border: 2px solid transparent;
+      }
+
+      &::after {
+        background-color: $color-light;
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+// Radios
+// Basically with slight adjustments from materializecss.com
+//-------------------------------------
+input[type='radio'] {
+  &:not(:checked),
+  &:checked {
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+  }
+
+  +label {
+    color: $color-text;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 300;
+    height: 25px;
+    padding-left: 35px;
+    position: relative;
+    transition: .28s ease;
+    user-select: none;
+
+    &::before,
+    &::after {
+      border-radius: 50%;
+      content: '';
+      height: 16px;
+      left: 0;
+      margin: 4px;
+      position: absolute;
+      top: 0;
+      transition: .28s ease;
+      width: 16px;
+      z-index: 0;
+    }
+  }
+
+  &:not(:checked)  + label {
+    &::before,
+    &::after {
+      border: 2px solid shade($color-light, 20%);
+    }
+
+    &::after {
+      transform: scale(0);
+    }
+  }
+
+  &:checked + label {
+    &::before {
+      border: 2px solid transparent;
+    }
+
+    &::after {
+      background-color: $color-radio;
+      transform: scale(1.02);
+    }
+  }
+
+  &:disabled {
+    + label {
+      color: tint($color-text, 20%);
+      cursor: not-allowed;
+    }
+
+    &:not(:checked) + label::before,
+    &:not(:checked) + label::after,
+    &:checked + label::before {
+      background-color: transparent;
+      border-color: $color-light;
+    }
+
+    &:checked + label::after {
+      background-color: $color-light;
+      border-color: $color-light;
+    }
+  }
+}
+
+
+// Selects
+//-------------------------------------
+
+// Hide real select boxes which have seen styled.
+select[data-ss-uuid] {
+  display: none;
+  pointer-events: none;
+}
+
+.style-select {
+  display: block;
+  position: relative;
+
+  &,
+  * {
+    color: $color-text;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .ss-selected-option {
+    border: 1px solid transparent-dark(.15);
+    border-radius: .3rem;
+    padding: .6rem 1rem;
+
+    &::after {
+      color: transparent-dark(.26);
+      content: '\F140';
+      display: block;
+      font: normal normal normal 20px/1 'Material Design Icons';
+      position: absolute;
+      right: 2%;
+      top: 26%;
+    }
+	}
+
+  .ss-dropdown {
+    border: 1px solid transparent-dark(.15);
+    border-top: 0;
+    box-shadow: 0 1px 3px transparent-dark(.1);
+    display: none;
+    float: left;
+    left: 0;
+    position: absolute;
+    top: 98%;
+    width: 100%;
+    z-index: 100;
+
+    .ss-option {
+      background-color: $color-select-bg;
+      padding: .6rem 1rem;
+      width: 100%;
+
+      &.highlighted {
+        background-color: $color-selected-bg;
+			}
+
+      &.disabled {
+        color: shade($color-light, 20%);
+			}
+		}
+	}
+
+  &.open {
+    .ss-selected-option {
+      border-bottom-color: transparent;
+    }
+
+    .ss-dropdown {
+      display: block;
+    }
+  }
+}
+
+// File Inputs
+//-------------------------------------
+
+.file-field {
+  display: block;
+
+  input[type='file'] {
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: .1px;
+    z-index: -1;
+  }
+
+  .file-path {
+    color: tint($color-text, 50%);
+    font-size: 1.4rem;
+    overflow: hidden;
+
+    input {
+      width: 100%;
+    }
+  }
+}

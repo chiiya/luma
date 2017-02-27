@@ -1,0 +1,35 @@
+//
+//--------------------------------------------------------------------------
+// Alerts - Luma
+//--------------------------------------------------------------------------
+//
+
+.alert {
+  border-radius: .3rem;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+
+  &.is-info {
+    background-color: $color-info;
+    color: tint($color-info, 80%);
+  }
+
+  &.is-success {
+    background-color: $color-success;
+    color: shade($color-success, 50%);
+  }
+
+  &.is-warning {
+    background-color: $color-warning;
+    color: shade($color-warning, 50%);
+  }
+
+  &.is-danger {
+    background-color: $color-danger;
+    color: tint($color-danger, 80%);
+  }
+
+}
+

@@ -1,0 +1,48 @@
+//
+//--------------------------------------------------------------------------
+// Base Styles - Luma
+//--------------------------------------------------------------------------
+//
+
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $color-text;
+  font-family: $font-text;
+  font-size: 1.6em;
+  letter-spacing: .01rem;
+  line-height: 1.6;
+}
+
+hr {
+  border: 0;
+  border-image: none;
+  border-top: .2rem solid $color-light;
+  margin: 3rem 0;
+}
+
+blockquote,
+dl,
+figure,
+form,
+ol,
+pre,
+table,
+ul {
+  margin-bottom: 2.5rem;
+}
+
+

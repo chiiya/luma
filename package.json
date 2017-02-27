@@ -1,0 +1,50 @@
+{
+  "name": "luma",
+  "version": "0.1.0",
+  "description": "Luma is a lightweight, flexbox-based CSS framework.",
+  "main": "luma.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D2Allaire/luma.git"
+  },
+  "keywords": [
+    "luma",
+    "css",
+    "framework",
+    "scss"
+  ],
+  "author": "Elisha Witte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/D2Allaire/luma/issues"
+  },
+  "homepage": "https://github.com/D2Allaire/luma#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.5",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "eslint": "^3.16.1",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-eslint": "^3.0.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.2",
+    "gulp-uglify": "^2.0.1",
+    "node-sass": "^4.5.0",
+    "sass-lint": "^1.10.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

@@ -1,0 +1,101 @@
+//
+//--------------------------------------------------------------------------
+// Variables - Luma
+//--------------------------------------------------------------------------
+//
+
+// Colors
+//-------------------------------------
+
+// General
+$color-primary: #d8616d !default;
+$color-primary-inverted: #fff !default; // Change to a value that makes text look good on your primary-color
+$color-light: #e3e4e4 !default;
+$color-dark: #363636 !default;
+$color-info: #3273dc !default;
+$color-success: #62d662 !default;
+$color-warning: #ffdd57 !default;
+$color-danger: #ff3860 !default;
+
+// Typography
+$color-text: #494949 !default;
+$color-text-light: #fefefe !default;
+$color-title: lighten($color-text, 10%) !default;
+$color-link: #41b7d8;
+$color-link-highlight: $color-primary !default;
+$color-link-hover: $color-primary-inverted !default;
+$color-link-border: rgba(0, 0, 0, .1) !default;
+$color-selection: #fff !default;
+$color-highlight: #fff87e !default;
+
+// Code
+$color-code: #ff3860 !default;
+$color-border-code: #e1e1e8 !default;
+$color-bg-code: #f6f9fc !default;
+
+// Blockquote
+$color-border-blockquote: #c9cbcb !default;
+
+// Labels
+$color-bg-label: $color-dark !default;
+
+// Tables
+$color-border-table: $color-light !default;
+$color-bg-table: #fafafa !default;
+
+// Buttons
+$color-border-button-light: #d7d7d7 !default;
+$color-button-light: #808080 !default;
+
+
+
+// Typography
+//-------------------------------------
+$sans-serif: (
+  'Fira Sans',
+  'Helvetica Neue',
+  Helvetica,
+  Arial,
+  sans-serif,
+);
+$serif: (
+  'Playfair Display',
+  Georgia,
+  'Times New Roman',
+  Times,
+  serif
+);
+$monospace: (
+  'Source Code Pro',
+  Consolas,
+  'Ubuntu Mono',
+  Courier,
+  monospace
+);
+
+$font-heading: $sans-serif !default;
+$font-text: $sans-serif !default;
+$font-size-h1: 3.2rem !default;
+$font-size-h2: 2.6rem !default;
+$font-size-h3: 2.2rem !default;
+$font-size-h4: 1.8rem !default;
+$font-size-h5: 1.6rem !default;
+$font-size-h6: 1.4rem !default;
+
+// Grid
+//-------------------------------------
+$breakpoints: (
+  'tiny': 480px,
+  'small': 768px,
+  'medium': 992px,
+  'large': 1225px,
+);
+
+// Forms
+//-------------------------------------
+
+$color-checkbox: shade($color-light, 50%) !default;
+$color-radio: shade($color-light, 50%) !default;
+$color-checkmark: #fff !default;
+$color-selected-bg: #f2f4f8 !default;
+$color-select-bg: #fff !default;

@@ -1,0 +1,43 @@
+//
+//--------------------------------------------------------------------------
+// Labels - Luma
+//--------------------------------------------------------------------------
+//
+
+.label {
+  align-items: center;
+  background-color: $color-bg-label;
+  border-radius: .8rem;
+  color: $color-text-light;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2rem;
+  justify-content: center;
+  padding: .2rem 1rem;
+  white-space: nowrap;
+
+  &.is-primary {
+    background-color: $color-primary;
+    color: $color-primary-inverted;
+  }
+
+  &.is-info {
+    background-color: $color-info;
+    color: $color-text-light;
+  }
+
+  &.is-success {
+    background-color: $color-success;
+    color: $color-text-light;
+  }
+
+  &.is-warning {
+    background-color: $color-warning;
+    color: $color-text;
+  }
+
+  &.is-danger {
+    background-color: $color-danger;
+    color: $color-text-light;
+  }
+}

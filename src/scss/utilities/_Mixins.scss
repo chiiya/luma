@@ -1,0 +1,90 @@
+@function bp($breakpoint) {
+  @return map-get($breakpoints, $breakpoint);
+}
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@mixin mobile {
+  @media screen and (max-width: bp('tiny')) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: bp('small')) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: bp('small')) and (max-width: bp('medium') - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: bp('medium')) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: bp('medium')) and (max-width: bp('large') - 1px) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media screen and (min-width: bp('large')) {
+    @content;
+  }
+}
+
+@mixin btn($color, $bg) {
+  background-color: $bg;
+  color: $color;
+
+  &:hover,
+  &:active {
+    color: $color;
+    @if ($bg == $color-warning or $bg == $color-danger) {
+      background-color: shade($bg, 5%);
+    } @else if ($bg == $color-dark) {
+      background-color: tint($bg, 15%);
+    } @else {
+      background-color: shade($bg, 15%);
+    }
+  }
+}
+
+@mixin btn-outline ($border, $color, $color-hover, $bg-hover) {
+  border: 1px solid $border;
+  color: $color;
+
+  &:hover,
+  &:active {
+    background: $bg-hover;
+    border-color: $bg-hover;
+    color: $color-hover;
+  }
+}
+
+@function transparent-dark($opacity) {
+  @return rgba(34, 36, 38, $opacity);
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Luma - SCSS Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="luma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,300i,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="http:////cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <header class="hero">
+        <h1>Luma</h1>
+    </header>
+    <div class="container">
+        <h2>Typography</h2>
+        <p>All font-sizes are defined in <code class="code">rem</code>, relative to the root element. Since we define the body to have a font-size of 62.5% we can assume that in most browsers this equates to <code class="code">1.0rem = 10px</code>.</p>
+        <p>Luma uses <a href="https://github.com/mozilla/Fira">Fira Sans</a> as the base font, available on <a href="https://fonts.google.com/specimen/Fira+Sans">Google Fonts</a>.</p>
+        <p>If you wish to use a <code>sans-serif</code> Font, we encourage the use of <a href="https://fonts.google.com/specimen/Playfair+Display" title="Playfair Display">Playfair Display</a>. Simply include the font in your document and switch out the font style in the <code>_Variables.scss</code> file.</p>
+
+        <h2 class="serif">Mapping the Urban Bike Utopias of the 1890s</h2>
+        <p class="serif subtitle">Bicycle mania swept the nation at the end of the 19th century. Can it happen again?</p>
+        <p>When you live in San Francisco, it’s not uncommon to see strange sights out your window. Once, I saw the mayor standing in the middle of the street, painting a bright green square on the asphalt.</p>
+        <p class="text-source text-right">[From <cite><a href="http://news.nationalgeographic.com/2017/02/historical-urban-bike-maps/">National Geographic</a>]</cite></p>
+
+        <h3>Headings</h3>
+        <p>There are 2 styles to choose from regarding headings: the default one and using the <code class="code">title</code> class in conjunction with a h1-h6 element. The latter will display headings in all-caps.</p>
+        <div class="row">
+            <div class="column is-6">
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div>
+            <div class="column is-6">
+                <h1 class="title">Heading 1</h1>
+                <h2 class="title">Heading 2</h2>
+                <h3 class="title">Heading 3</h3>
+                <h4 class="title">Heading 4</h4>
+                <h5 class="title">Heading 5</h5>
+                <h6 class="title">Heading 6</h6>
+            </div>
+        </div>
+
+        <h3>Inline Text Elements</h3>
+
+        <h4 class="title">Marked Text / Highlight</h4>
+        <p>Use the <code class="code">mark</code> element or class to <mark>highlight</mark> text with a marker pen effect.</p>
+    
+        <h4 class="title">Links</h4>
+        <p>By default, links will the displayed <a href="">like this</a>. If you wish, you can add the special <code class="code">link</code> class to add a background-color effect: <a class="link">Example</a></p>
+
+        <h4 class="title">Other Inline Elements</h4>
+        <p>Feel free to use any of the other available inline elements:</p>
+
+        <h3>Blockquote</h3>
+        <p>For quoting blocks of content from another source within your document.</p>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+
+        <hr />
+
+        <h2>Code</h2>
+        <p>To display inline code, use the <code>&lt;code&gt;</code> element. If you wish to display the code in a block instead, wrap the <code>&lt;code&gt;</code> element inside a <code>&lt;pre&gt;</code> element:</p>
+        <p>An example of <code>some inline</code> code.</p>
+        <pre><code>.body {
+    display: none;
+}</code></pre>
+
+        <hr />
+
+        <h2>Lists</h2>
+        <p>There are 3 types of lists available: <em>unordered <code class="code">ul</code> lists</em> where your items will be marked with bullets, <em>ordered <code class="code">ol</code> lists</em> where your items will be numbered and <em>description <code class="code">dl</code> lists</em> where your items will not be marked.</p>
+        <div class="row">
+            <div class="column is-4">
+                <ul>
+                    <li>Unordered List Item 1</li>
+                    <li>Unordered List Item 2</li>
+                </ul>
+            </div>
+            <div class="column is-4">
+                <ol>
+                    <li>Ordered List Item 1</li>
+                    <li>Ordered List Item 2</li>
+                </ol>
+            </div>
+            <div class="column is-4">
+                <dl>
+                    <dt>Description list item 1</dt>
+                    <dd>Description list item 1.1</dd>
+                </dl>
+            </div>
+        </div>
+        
+        <hr />
+        
+        <h2>Labels</h2>
+        <p>Use Labels to tag your content.</p>
+        <span class="label">Drama</span> <span class="label">Action</span>
+        <span class="label is-primary">Primary</span> <span class="label is-info">Info</span> <span class="label is-success">Success</span> <span class="label is-warning">Warning</span> <span class="label is-danger">Danger</span>
+
+        <hr />
+
+        <h2>Tables</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Steven</td>
+                    <td>24</td>
+                    <td>Los Angeles, CA</td>
+                </tr>
+                <tr>
+                    <td>Michael</td>
+                    <td>35</td>
+                    <td>Seattle, WA</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+    
+        <h2>Buttons</h2>
+        <p>Buttons come in two basic styles: outlined and filled.</p>
+        <h4 class="title">Outlined Buttons</h4>
+        <div class="block">
+            <div class="button-group">
+                <a class="button is-outline">Submit</a>
+                <a class="button is-outline is-primary">Primary</a>
+                <a class="button is-outline is-info">Information</a>
+                <a class="button is-outline is-success">Success</a>
+                <a class="button is-outline is-danger">Danger</a>
+            </div>
+        </div>
+        <h4 class="title">Filled Buttons</h4>
+        <div class="block">
+            <div class="button-group">
+                <a class="button">Submit</a>
+                <a class="button is-primary">Primary</a>
+                <a class="button is-info">Information</a>
+                <a class="button is-success">Success</a>
+                <a class="button is-warning">Warning</a>
+                <a class="button is-danger">Danger</a>
+            </div>
+        </div>
+        <p>And with <code>has-depth</code>:</p>
+        <div class="block">
+            <div class="button-group">
+                <a class="button has-depth">Submit</a>
+                <a class="button is-primary has-depth">Primary</a>
+                <a class="button is-info has-depth">Information</a>
+                <a class="button is-success has-depth">Success</a>
+                <a class="button is-warning has-depth">Warning</a>
+                <a class="button is-danger has-depth">Danger</a>
+            </div>
+        </div>
+        <h4 class="title">Icons</h4>
+        <p>Feel free to use any icon in conjunction with a button:</p>
+        <div class="block">
+            <div class="button-group">
+                <a class="button is-outline">
+                    <span class="icon">
+                        <i class="mdi mdi-play"></i>
+                    </span>                    
+                    <span>Watch Now</span>
+                </a>
+                <a class="button is-outline">
+                    <span>Watch Now</span>
+                    <span class="icon">
+                        <i class="mdi mdi-play"></i>
+                    </span>
+                </a>
+                <a class="button is-outline is-danger">
+                    <span>Delete</span>
+                    <span class="icon">
+                        <i class="mdi mdi-close"></i>
+                    </span>
+                </a>
+                <a class="button is-outline">
+                    <span>Follow</span>
+                    <span class="icon">
+                        <i class="mdi mdi-account-plus"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <p>There is also a special <code>is-animated</code> class that you can use:</p>
+        <div class="block">
+            <div class="button-group">
+                <a class="button is-outline is-animated">
+                    <span>Submit</span>
+                    <span class="icon">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </span>
+                </a>
+                <a class="button is-outline is-animated">
+                    <span>Follow</span>
+                    <span class="icon">
+                        <i class="mdi mdi-account-plus"></i>
+                    </span>
+                </a>
+                <a class="button is-danger has-depth is-animated">
+                    <span>Delete</span>
+                    <span class="icon">
+                        <i class="mdi mdi-close"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <hr />
+
+        <h2>Alerts</h2>
+        <p>Use alerts to provide users with contextual feedback.</p>
+        <div class="alert is-info">
+            Info. Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="alert is-success">
+            Success. Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet,consectetur adipiscing elit.
+        </div>
+        <div class="alert is-warning">
+            Warning. Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet,consectetur adipiscing elit.
+        </div>
+        <div class="alert is-danger">
+            Danger. Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet,consectetur adipiscing elit.
+        </div>
+
+        <hr />
+
+        <h2>Grid</h2>
+        <p>Luma is based on a Flexbox-Grid, which means that your are no longer bound by annoying float-based layouts. Simply specify a <code>row</code> and add as many columns as you need. They will automatically take up all the available space. You can of course also define fixed width percentages in the classic 12-grid system. A <code>column is-4</code> will take up exactly one third of the available space. You're also free to define an offset.</p>
+        <p>On mobile, all columns will automatically be displayed on top of each other.</p>
+        <div class="row">
+            <div class="column is-4">
+                <p class="alert is-info"><code>column is-4</code></p>
+            </div>
+            <div class="column is-8">
+                <p class="alert is-info"><code>column is-8</code></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column is-6">
+                <p class="alert is-info"><code>column is-6</code></p>
+            </div>
+            <div class="column is-2">
+                <p class="alert is-info"><code>column is-2</code></p>
+            </div>
+            <div class="column">
+                <p class="alert is-success"><code>column</code></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <p class="alert is-success"><code>column</code></p>
+            </div>
+            <div class="column">
+                <p class="alert is-success"><code>column</code></p>
+            </div>
+            <div class="column">
+                <p class="alert is-success"><code>column</code></p>
+            </div>
+            <div class="column">
+                <p class="alert is-success"><code>column</code></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column is-4">
+                <p class="alert is-info"><code>column is-4</code></p>
+            </div>
+            <div class="column is-4 is-offset-4">
+                <p class="alert is-info"><code>column is-4 is-offset-4</code></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column is-8 is-offset-4">
+                <p class="alert is-info"><code>column is-8 is-offset-4</code></p>
+            </div>
+        </div>
+
+        <p>If you anticipate that there will be more columns than will fit in a row, simply add the <code>is-multiline</code> class to the row, and it will automatically wrap.</p>
+
+        <div class="row is-multiline">
+            <div class="column is-4">
+                <p class="alert is-info"><code>column is-4</code></p>
+            </div>
+            <div class="column is-4">
+                <p class="alert is-info"><code>column is-4</code></p>
+            </div>
+            <div class="column is-4">
+                <p class="alert is-info"><code>column is-4</code></p>
+            </div>
+            <div class="column is-4">
+                <p class="alert is-info"><code>column is-4</code></p>
+            </div>
+        </div>
+        
+        <hr />
+
+        <h2>Forms</h2>
+        <p>Why should forms be ugly? Luma provides custom styling for all common input elements.</p>
+        <form>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Send me a message"></textarea>
+            </div>
+            <div class="field">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I accept all the evil terms and conditions.</label>
+            </div>
+
+            <input type="submit" class="button is-outline" value="Submit">
+        </form>
+
+        <h3>Form Elements</h3>
+
+        <h4 class="title">Text Inputs</h4>
+        <div class="field">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Title">
+        </div>
+        <div class="field">
+            <label for="title-disabled">Disabled</label>
+            <input type="text" id="title-disabled" name="title-disabled" placeholder="Help! I'm Disabled!" disabled>
+        </div>
+        <p>If you include the <a href="#" title="Luma Javascript">Luma Javascript</a> file, the textarea will automatically resize (shrink/expand) on user input.</p>
+        <div class="field">
+            <textarea placeholder="I've got big plans to expand!"></textarea>
+        </div>
+
+        <h4 class="title">Checkboxes</h4>
+        <p>Luma uses custom CSS checkboxes. Check them out:</p>
+        <div class="field">
+            <input type="checkbox" id="check" name="check">
+            <label for="check">Check 123</label>
+        </div>
+        <div class="field">
+            <input type="checkbox" id="check-disabled" name="check-disabled" disabled>
+            <label for="check-disabled">Disabled Checkbox</label>
+        </div>
+
+        <h4 class="title">Radios</h4>
+        <p>Luma also uses custom CSS radios:</p>
+        <div class="field">
+            <input type="radio" id="radio1" name="radios">
+            <label for="radio1">Option 1</label>
+        </div>
+        <div class="field">
+            <input type="radio" id="radio2" name="radios">
+            <label for="radio2">Option 2</label>
+        </div>
+        <div class="field">
+            <input type="radio" id="radio3" name="radios" disabled>
+            <label for="radio3">Disabled Option 3</label>
+        </div>
+
+        <h4 class="title">Selects</h4>
+        <div class="row">
+          <div class="column is-4">
+            <div class="field">
+              <select>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option disabled>Option 3 Disabled</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="title">File Uploads</h4>
+        <div class="file-field">
+          <label for="file" class="button is-outline">
+            <span>Upload</span>
+              <span class="icon">
+                <i class="mdi mdi-cloud-upload"></i>
+              </span>
+            </label>
+          <input type="file" id="file">
+          <div class="file-path">Please select a file</div>
+        </div>
+
+        <p>For the custom selects and file uploads the <a href="#" title="Luma Javascript">Luma Javascript</a> is required.</p>
+        
+
+        <script src="luma.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+//
+//--------------------------------------------------------------------------
+// Lists - Luma
+//--------------------------------------------------------------------------
+//
+
+
+ul,
+ol,
+dl {
+  color: $color-text;
+  font-family: $font-text;
+  font-weight: 300;
+  list-style: none;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  padding-left: 0;
+
+  dl,
+  ol,
+  ul {
+    font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+  }
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0;
+}
+
+dt {
+  font-weight: 400;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ul {
+  li::before {
+    color: $color-primary;
+    content: '\002022';
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 7rem;
+  }
+}

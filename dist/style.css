@@ -1,0 +1,35 @@
+header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(#ea524e 0%, #86313c 50%, #271224 100%) fixed;
+  background: -o-linear-gradient(#ea524e 0%, #86313c 50%, #271224 100%) fixed;
+  background: linear-gradient(#ea524e 0%, #86313c 50%, #271224 100%) fixed;
+}
+
+header h1 {
+  font-size: 10rem;
+  color: #fff;
+  font-weight: 100;
+  opacity: 0.75;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  max-width: 800px;
+  padding-bottom: 200px;
+}
+
+.block {
+  margin-bottom: 2rem;
+}
+
+.serif {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+}
+
+h2:not(.title) {
+  margin-top: 2rem;
+}
