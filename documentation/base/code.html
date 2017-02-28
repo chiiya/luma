@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Luma - SCSS Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../luma.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,300i,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="http:////cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body class="doc">
+    <header class="hero">
+        <div class="hero__information">
+          <img src="images/logo.png" />
+          <h1>Luma</h1>
+          <h2>Lightweight, <strong>flex</strong>ible</h2>
+          <p>6kB CSS gzipped / 5kB JS gzipped</p>
+          <div class="button-group">
+            <a href="/#overview" class="button is-outline is-light">Get Started</a>
+            <a href="https://github.com/D2Allaire/luma" class="button is-outline is-light">Github</a>
+          </div>
+        </div>
+    </header>
+    <main>
+      <nav class="nav has-depth">
+        <div class="container">
+          <div class="nav-left">
+            <a class="nav-item is-tab" href="/">Overview</a>
+            <a class="nav-item is-tab is-active">Base</a>
+            <a class="nav-item is-tab">Elements</a>
+            <a class="nav-item is-tab">Layouts</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="nav sub-nav">
+          <div class="nav-left">
+            <a class="nav-item" href="/base/typography/">Typography</a>
+            <a class="nav-item is-active">Code</a>
+            <a class="nav-item" href="/base/lists/">Lists</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Code</h2>
+        <p>To display inline code, use the <code>&lt;code&gt;</code> element. If you wish to display the code in a block instead, wrap the <code>&lt;code&gt;</code> element inside a <code>&lt;pre&gt;</code> element:</p>
+        <div class="example">
+          <p>An example of <code>some inline</code> code.</p>
+          <pre><code class="nohighlight">.body {
+  display: none;
+}</code></pre>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;p&gt;An example of &lt;code&gt;some inline&lt;/code&gt; code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.body {
+  display: none;
+}&lt;/code&gt;&lt;pre&gt;</code></pre>
+
+      <p>You can also preprend the optional header to the code block like we've done in this documentation:</p>
+
+
+      <div class="example">
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="nohighlight">.title {
+  font-size: 1.8rem;
+}</code></pre>
+      </div>
+      
+      <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+      </div>
+      <pre><code class="html">&lt;div class="code-header"&gt;
+  &lt;span class="code-header-icon"&gt;&lt;i class="mdi mdi-code-tags"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;.title {
+  font-size: 1.8rem;
+}&lt;/code&gt;&lt;pre&gt;</code></pre>
+    </div>
+    </main>
+        <script src="../luma.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

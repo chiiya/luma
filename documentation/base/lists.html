@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Luma - SCSS Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../luma.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,300i,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="http:////cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body class="doc">
+    <header class="hero">
+        <div class="hero__information">
+          <img src="images/logo.png" />
+          <h1>Luma</h1>
+          <h2>Lightweight, <strong>flex</strong>ible</h2>
+          <p>6kB CSS gzipped / 5kB JS gzipped</p>
+          <div class="button-group">
+            <a href="/#overview" class="button is-outline is-light">Get Started</a>
+            <a href="https://github.com/D2Allaire/luma" class="button is-outline is-light">Github</a>
+          </div>
+        </div>
+    </header>
+    <main>
+      <nav class="nav has-depth">
+        <div class="container">
+          <div class="nav-left">
+            <a class="nav-item is-tab" href="/">Overview</a>
+            <a class="nav-item is-tab is-active">Base</a>
+            <a class="nav-item is-tab">Elements</a>
+            <a class="nav-item is-tab">Layouts</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="nav sub-nav">
+          <div class="nav-left">
+            <a class="nav-item" href="/base/typography/">Typography</a>
+            <a class="nav-item" href="/base/code/">Code</a>
+            <a class="nav-item is-active">Lists</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Lists</h2>
+        <p>There are 3 types of lists available: <em>unordered <code class="code">ul</code> lists</em> where your items will be marked with bullets, <em>ordered <code class="code">ol</code> lists</em> where your items will be numbered and <em>description <code class="code">dl</code> lists</em> where your items will not be marked.</p>
+        <div class="example">
+          <div class="row">
+            <div class="column is-4">
+                <ul>
+                    <li>Unordered List Item 1</li>
+                    <li>Unordered List Item 2</li>
+                </ul>
+            </div>
+            <div class="column is-4">
+                <ol>
+                    <li>Ordered List Item 1</li>
+                    <li>Ordered List Item 2</li>
+                </ol>
+            </div>
+            <div class="column is-4">
+                <dl>
+                    <dt>Description list item 1</dt>
+                    <dd>Description list item 1.1</dd>
+                </dl>
+            </div>
+        </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;ul&gt;
+  &lt;li&gt;Unordered List Item 1&lt;/li&gt;
+  &lt;li&gt;Unordered List Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ordered List Item 1&lt;/li&gt;
+  &lt;li&gt;Ordered List Item 2&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Description list item 1&lt;/dt&gt;
+  &lt;dd&gt;Description list item 1.1&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+    </div>
+    </main>
+        <script src="../luma.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
