@@ -6,6 +6,7 @@
 //
 
 @import 'utilities/Mixins';
+@import 'utilities/Config';
 @import 'utilities/Variables';
 @import 'base/normalize';
 @import 'base/Base';
@@ -19,3 +20,4 @@
 @import 'components/Tables';
 @import 'components/Lists';
 @import 'components/Code';
+@import 'layouts/Navigation';

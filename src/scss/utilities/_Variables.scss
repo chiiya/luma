@@ -5,10 +5,11 @@
 //
 
 // Colors
+// d8616d
 //-------------------------------------
 
 // General
-$color-primary: #d8616d !default;
+$color-primary: #4a4b84 !default;
 $color-primary-inverted: #fff !default; // Change to a value that makes text look good on your primary-color
 $color-light: #e3e4e4 !default;
 $color-dark: #363636 !default;
@@ -23,18 +24,20 @@ $color-text-light: #fefefe !default;
 $color-title: lighten($color-text, 10%) !default;
 $color-link: #41b7d8;
 $color-link-highlight: $color-primary !default;
-$color-link-hover: $color-primary-inverted !default;
+$color-link-highlight-hover: $color-primary-inverted !default;
 $color-link-border: rgba(0, 0, 0, .1) !default;
 $color-selection: #fff !default;
+$color-selection-bg: #a18be6 !default;
 $color-highlight: #fff87e !default;
 
 // Code
 $color-code: #ff3860 !default;
-$color-border-code: #e1e1e8 !default;
-$color-bg-code: #f6f9fc !default;
+$color-border-code: #e8e8e8 !default;
+$color-bg-code: #fcfcfc !default;
+$color-bg-code-header: #e7e7e7 !default;
 
 // Blockquote
-$color-border-blockquote: #c9cbcb !default;
+$color-blockquote-border: $color-primary !default;
 
 // Labels
 $color-bg-label: $color-dark !default;
@@ -99,3 +102,10 @@ $color-radio: shade($color-light, 50%) !default;
 $color-checkmark: #fff !default;
 $color-selected-bg: #f2f4f8 !default;
 $color-select-bg: #fff !default;
+
+// Navigation
+//-------------------------------------
+$color-nav-bg: #fff !default;
+$nav-height: 5rem !default;
+$color-nav-text: tint($color-text, 20%) !default;
+$color-nav-text-hover: $color-dark !default;

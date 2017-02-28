@@ -7,7 +7,7 @@
 
 pre {
   background: $color-bg-code;
-  border-left: .5rem solid darken($color-bg-code, 30%);
+  border: 1px solid $color-border-code;
   overflow-y: hidden;
 
   &>code {
@@ -17,7 +17,24 @@ pre {
     font-size: 14px;
     line-height: inherit;
     padding: 1rem 1.5rem;
-    white-space: pre;
+    white-space: pre-wrap;
+  }
+}
+
+.code-header {
+  background-color: $color-bg-code-header;
+  height: 2rem;
+  position: relative;
+  width: 100%;
+
+  span {
+    color: $color-text;
+    position: absolute;
+    right: 1%;
+  }
+
+  + pre {
+    margin-top: 0;
   }
 }
 

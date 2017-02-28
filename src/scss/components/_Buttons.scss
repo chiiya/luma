@@ -61,6 +61,16 @@
       color: $color-dark;
     }
 
+    &.is-light {
+      border: 1px solid $color-light;
+      color: $color-light;
+
+      &:hover,
+      &:active {
+        border-color: $color-checkmark;
+        color: $color-checkmark;
+      }
+    }
 
     &.is-primary {
       @include btn-outline($color-primary, $color-primary, #fff, $color-primary);
