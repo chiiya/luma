@@ -15,6 +15,7 @@ const cleanCSS = require('gulp-clean-css');
 const paths = {
   src: './src',
   build: './dist',
+  docs: './documentation'
 };
 const config = {
   projectName: 'luma',
@@ -38,7 +39,7 @@ const config = {
 /**
  * Run all tasks needed for a build.
  */
-gulp.task('build', ['sass', 'scripts']);
+gulp.task('build', ['copy-css', 'copy-js']);
 
 /**
  * Default task. Run the watch task
@@ -66,6 +67,14 @@ gulp.task('sass', ['sass:lint'], () => {
 });
 
 /**
+ * Copy the minified CSS file to the documentation folder
+ */
+gulp.task('copy-css', ['sass'], () => {
+  return gulp.src(`${paths.build}/${config.projectName}.min.css`)
+    .pipe(gulp.dest(paths.docs));
+});
+
+/**
  * Lint SCSS files
  */
 gulp.task('sass:lint', () => {
@@ -86,6 +95,14 @@ gulp.task('scripts', ['scripts:lint'], () => {
     .pipe(buffer())
     .pipe(uglify())
     .pipe(gulp.dest(paths.build));
+});
+
+/**
+ * Copy the minified JS file to the documentation folder
+ */
+gulp.task('copy-js', ['scripts'], () => {
+  return gulp.src(`${paths.build}/${config.projectName}.min.js`)
+    .pipe(gulp.dest(paths.docs));
 });
 
 /**
