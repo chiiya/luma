@@ -21,9 +21,8 @@
           <img src="images/logo.png" />
           <h1>Luma</h1>
           <h2>Lightweight, <strong>flex</strong>ible</h2>
-          <p>6kB CSS gzipped / 5kB JS gzipped</p>
           <div class="button-group">
-            <a href="/#overview" class="button is-outline is-light">Get Started</a>
+            <a href="/luma/#overview" class="button is-outline is-light">Get Started</a>
             <a href="https://github.com/D2Allaire/luma" class="button is-outline is-light">Github</a>
           </div>
         </div>
@@ -32,10 +31,10 @@
       <nav class="nav has-depth">
         <div class="container">
           <div class="nav-left">
-            <a class="nav-item is-tab" href="/">Overview</a>
+            <a class="nav-item is-tab" href="/luma/#overview">Overview</a>
             <a class="nav-item is-tab is-active">Base</a>
-            <a class="nav-item is-tab">Elements</a>
-            <a class="nav-item is-tab">Layouts</a>
+            <a class="nav-item is-tab" href="/luma/elements/labels">Elements</a>
+            <a class="nav-item is-tab" href="/luma/layouts/grid">Layouts</a>
           </div>
         </div>
       </nav>
@@ -43,9 +42,9 @@
       <div class="container">
         <div class="nav sub-nav">
           <div class="nav-left">
-            <a class="nav-item" href="/base/typography">Typography</a>
+            <a class="nav-item" href="/luma/base/typography">Typography</a>
             <a class="nav-item is-active">Code</a>
-            <a class="nav-item" href="/base/lists">Lists</a>
+            <a class="nav-item" href="/luma/base/lists">Lists</a>
           </div>
         </div>
       </div>
@@ -59,7 +58,6 @@
   display: none;
 }</code></pre>
         </div>
-
         <div class="code-header">
           <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
         </div>
@@ -68,6 +66,13 @@
 &lt;pre&gt;&lt;code&gt;.body {
   display: none;
 }&lt;/code&gt;&lt;pre&gt;</code></pre>
+
+        <div class="customize">
+          <p><code>$color-bg-code</code> Background-Color for <code>pre</code> blocks and inline code.</p>
+          <p><code>$color-border-code</code> Color for the <code>pre</code> block border.</p>
+          <p><code>$color-code</code> Font color for inline <code>code</code> elements.</p>
+          <p><code>$monospace</code> Font family that is used in code blocks.</p>
+        </div>
 
       <p>You can also preprend the optional header to the code block like we've done in this documentation:</p>
 
@@ -90,6 +95,9 @@
 &lt;pre&gt;&lt;code&gt;.title {
   font-size: 1.8rem;
 }&lt;/code&gt;&lt;pre&gt;</code></pre>
+        <div class="customize">
+          <p><code>$color-bg-code-header</code> Background-Color for the header bar.</p>
+        </div>
     </div>
     </main>
         <script src="../luma.min.js"></script>

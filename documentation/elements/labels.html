@@ -32,9 +32,9 @@
         <div class="container">
           <div class="nav-left">
             <a class="nav-item is-tab" href="/luma/#overview">Overview</a>
-            <a class="nav-item is-tab is-active">Base</a>
-            <a class="nav-item is-tab" href="/luma/elements/labels">Elements</a>
-            <a class="nav-item is-tab" href="/luma/layouts/grid">Layouts</a>
+            <a class="nav-item is-tab" href="/luma/base/typography">Base</a>
+            <a class="nav-item is-tab is-active">Elements</a>
+            <a class="nav-item is-tab" href="luma/layouts/grid">Layouts</a>
           </div>
         </div>
       </nav>
@@ -42,56 +42,37 @@
       <div class="container">
         <div class="nav sub-nav">
           <div class="nav-left">
-            <a class="nav-item" href="/luma/base/typography">Typography</a>
-            <a class="nav-item" href="/luma/base/code">Code</a>
-            <a class="nav-item is-active">Lists</a>
+            <a class="nav-item is-active">Labels</a>
+            <a class="nav-item" href="/luma/elements/tables">Tables</a>
+            <a class="nav-item" href="/luma/elements/buttons">Buttons</a>
+            <a class="nav-item" href="/luma/elements/alerts">Alerts</a>
+            <a class="nav-item" href="/luma/elements/forms">Forms</a>
           </div>
         </div>
       </div>
 
       <div class="container">
-        <h2>Lists</h2>
-        <p>There are 3 types of lists available: <em>unordered <code class="code">ul</code> lists</em> where your items will be marked with bullets, <em>ordered <code class="code">ol</code> lists</em> where your items will be numbered and <em>description <code class="code">dl</code> lists</em> where your items will not be marked.</p>
+        <h2>Labels</h2>
+        <p>Use Labels to tag your content. They could also be used as notification badges.</p>
         <div class="example">
-          <div class="row">
-            <div class="column is-4">
-                <ul>
-                    <li>Unordered List Item 1</li>
-                    <li>Unordered List Item 2</li>
-                </ul>
-            </div>
-            <div class="column is-4">
-                <ol>
-                    <li>Ordered List Item 1</li>
-                    <li>Ordered List Item 2</li>
-                </ol>
-            </div>
-            <div class="column is-4">
-                <dl>
-                    <dt>Description list item 1</dt>
-                    <dd>Description list item 1.1</dd>
-                </dl>
-            </div>
-        </div>
+            <p><span class="label">Drama</span> <span class="label">Action</span>
+            <span class="label is-primary">Primary</span> <span class="label is-info">Info</span> <span class="label is-success">Success</span> <span class="label is-warning">Warning</span> <span class="label is-danger">Danger</span></p>
         </div>
 
         <div class="code-header">
           <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
         </div>
-        <pre><code class="html">&lt;ul&gt;
-  &lt;li&gt;Unordered List Item 1&lt;/li&gt;
-  &lt;li&gt;Unordered List Item 2&lt;/li&gt;
-&lt;/ul&gt;
+        <pre><code class="html">&lt;span class="label"&gt;Drama&lt;/span&gt;
+&lt;span class="label"&gt;Action&lt;/span&gt;
+&lt;span class="label is-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="label is-info"&gt;Info&lt;/span&gt;
+&lt;span class="label is-success"&gt;Success&lt;/span&gt;
+&lt;span class="label is-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="label is-danger"&gt;Danger&lt;/span&gt;</code></pre>
 
-&lt;ol&gt;
-  &lt;li&gt;Ordered List Item 1&lt;/li&gt;
-  &lt;li&gt;Ordered List Item 2&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Description list item 1&lt;/dt&gt;
-  &lt;dd&gt;Description list item 1.1&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
+        <div class="customize">
+          <p><code>$color-bg-label</code> Default background color labels that is used when no <code>is-*</code> class is specified.</p>
+        </div>
     </div>
     </main>
         <script src="../luma.min.js"></script>

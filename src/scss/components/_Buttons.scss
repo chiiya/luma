@@ -7,7 +7,7 @@
 
 .button {
   // Default Style
-  @include btn($color-light, $color-dark);
+  @include btn($color-button, $color-button-bg);
 
   -moz-osx-font-smoothing: grayscale;
   align-items: center;
@@ -48,9 +48,9 @@
 
   &.is-outline {
     background: none;
-    border: 1px solid $color-border-button-light;
+    border: 1px solid $color-button-outline-border;
     box-shadow: none;
-    color: $color-button-light;
+    color: $color-button-outline;
     overflow: hidden;
     transition: all .3s;
     z-index: 1;

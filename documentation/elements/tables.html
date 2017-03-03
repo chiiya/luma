@@ -32,9 +32,9 @@
         <div class="container">
           <div class="nav-left">
             <a class="nav-item is-tab" href="/luma/#overview">Overview</a>
-            <a class="nav-item is-tab is-active">Base</a>
-            <a class="nav-item is-tab" href="/luma/elements/labels">Elements</a>
-            <a class="nav-item is-tab" href="/luma/layouts/grid">Layouts</a>
+            <a class="nav-item is-tab" href="/luma/base/typography">Base</a>
+            <a class="nav-item is-tab is-active">Elements</a>
+            <a class="nav-item is-tab" href="luma/layouts/grid">Layouts</a>
           </div>
         </div>
       </nav>
@@ -42,56 +42,71 @@
       <div class="container">
         <div class="nav sub-nav">
           <div class="nav-left">
-            <a class="nav-item" href="/luma/base/typography">Typography</a>
-            <a class="nav-item" href="/luma/base/code">Code</a>
-            <a class="nav-item is-active">Lists</a>
+            <a class="nav-item" href="/luma/elements/labels">Labels</a>
+            <a class="nav-item is-active">Tables</a>
+            <a class="nav-item" href="/luma/elements/buttons">Buttons</a>
+            <a class="nav-item" href="/luma/elements/alerts">Alerts</a>
+            <a class="nav-item" href="/luma/elements/forms">Forms</a>
           </div>
         </div>
       </div>
 
       <div class="container">
-        <h2>Lists</h2>
-        <p>There are 3 types of lists available: <em>unordered <code class="code">ul</code> lists</em> where your items will be marked with bullets, <em>ordered <code class="code">ol</code> lists</em> where your items will be numbered and <em>description <code class="code">dl</code> lists</em> where your items will not be marked.</p>
+        <h2>Tables</h2>
+        <p>Tables in Luma come with some simple default styling:</p>
         <div class="example">
-          <div class="row">
-            <div class="column is-4">
-                <ul>
-                    <li>Unordered List Item 1</li>
-                    <li>Unordered List Item 2</li>
-                </ul>
-            </div>
-            <div class="column is-4">
-                <ol>
-                    <li>Ordered List Item 1</li>
-                    <li>Ordered List Item 2</li>
-                </ol>
-            </div>
-            <div class="column is-4">
-                <dl>
-                    <dt>Description list item 1</dt>
-                    <dd>Description list item 1.1</dd>
-                </dl>
-            </div>
-        </div>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Location</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Steven</td>
+                      <td>24</td>
+                      <td>Los Angeles, CA</td>
+                  </tr>
+                  <tr>
+                      <td>Michael</td>
+                      <td>35</td>
+                      <td>Seattle, WA</td>
+                  </tr>
+              </tbody>
+          </table>
         </div>
 
         <div class="code-header">
           <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
         </div>
-        <pre><code class="html">&lt;ul&gt;
-  &lt;li&gt;Unordered List Item 1&lt;/li&gt;
-  &lt;li&gt;Unordered List Item 2&lt;/li&gt;
-&lt;/ul&gt;
+        <pre><code class="html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Steven&lt;/th&gt;
+      &lt;th&gt;24&lt;/th&gt;
+      &lt;th&gt;Los Angeles, CA&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Michael&lt;/th&gt;
+      &lt;th&gt;35&lt;/th&gt;
+      &lt;th&gt;Seattle, WA&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
 
-&lt;ol&gt;
-  &lt;li&gt;Ordered List Item 1&lt;/li&gt;
-  &lt;li&gt;Ordered List Item 2&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Description list item 1&lt;/dt&gt;
-  &lt;dd&gt;Description list item 1.1&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
+        <div class="customize">
+          <p><code>$color-hover-table</code> Background color for row hover</p>
+          <p><code>$color-border-table</code> Border color for tables</p>
+        </div>
     </div>
     </main>
         <script src="../luma.min.js"></script>

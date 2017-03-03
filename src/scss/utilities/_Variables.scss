@@ -44,11 +44,13 @@ $color-bg-label: $color-dark !default;
 
 // Tables
 $color-border-table: $color-light !default;
-$color-bg-table: #fafafa !default;
+$color-hover-table: #fafafa !default;
 
 // Buttons
-$color-border-button-light: #d7d7d7 !default;
-$color-button-light: #808080 !default;
+$color-button: $color-light !default;
+$color-button-bg: $color-dark !default;
+$color-button-outline-border: #d7d7d7 !default;
+$color-button-outline: #808080 !default;
 
 
 

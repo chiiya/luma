@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Luma - SCSS Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../luma.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,300i,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="http:////cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body class="doc">
+    <header class="hero">
+        <div class="hero__information">
+          <img src="images/logo.png" />
+          <h1>Luma</h1>
+          <h2>Lightweight, <strong>flex</strong>ible</h2>
+          <div class="button-group">
+            <a href="/luma/#overview" class="button is-outline is-light">Get Started</a>
+            <a href="https://github.com/D2Allaire/luma" class="button is-outline is-light">Github</a>
+          </div>
+        </div>
+    </header>
+    <main>
+      <nav class="nav has-depth">
+        <div class="container">
+          <div class="nav-left">
+            <a class="nav-item is-tab" href="/luma/#overview">Overview</a>
+            <a class="nav-item is-tab" href="/luma/base/typography">Base</a>
+            <a class="nav-item is-tab is-active">Elements</a>
+            <a class="nav-item is-tab" href="luma/layouts/grid">Layouts</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="nav sub-nav">
+          <div class="nav-left">
+            <a class="nav-item" href="/luma/elements/labels">Labels</a>
+            <a class="nav-item" href="/luma/elements/tables">Tables</a>
+            <a class="nav-item is-active" href="/luma/elements/buttons">Buttons</a>
+            <a class="nav-item" href="/luma/elements/alerts">Alerts</a>
+            <a class="nav-item" href="/luma/elements/forms">Forms</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Buttons</h2>
+        <p>Buttons come in two basic styles: outlined and filled.</p>
+        <h4 class="title">Outlined Buttons</h4>
+        <div class="example">
+          <div class="block">
+              <div class="button-group">
+                  <a class="button is-outline">Submit</a>
+                  <a class="button is-outline is-primary">Primary</a>
+                  <a class="button is-outline is-info">Information</a>
+                  <a class="button is-outline is-success">Success</a>
+                  <a class="button is-outline is-danger">Danger</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="button-group"&gt;
+  &lt;a class="button is-outline"&gt;Submit&lt;/a&gt;
+  &lt;a class="button is-outline is-primary"&gt;Primary&lt;/a&gt;
+  &lt;a class="button is-outline is-info"&gt;Information&lt;/a&gt;
+  &lt;a class="button is-outline is-success"&gt;Success&lt;/a&gt;
+  &lt;a class="button is-outline is-danger"&gt;Danger&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4 class="title">Filled Buttons</h4>
+        <div class="example">
+          <div class="block">
+              <div class="button-group">
+                  <a class="button">Submit</a>
+                  <a class="button is-primary">Primary</a>
+                  <a class="button is-info">Information</a>
+                  <a class="button is-success">Success</a>
+                  <a class="button is-warning">Warning</a>
+                  <a class="button is-danger">Danger</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="button-group"&gt;
+  &lt;a class="button"&gt;Submit&lt;/a&gt;
+  &lt;a class="button is-primary"&gt;Primary&lt;/a&gt;
+  &lt;a class="button is-info"&gt;Information&lt;/a&gt;
+  &lt;a class="button is-success"&gt;Success&lt;/a&gt;
+  &lt;a class="button is-danger"&gt;Danger&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>And with <code>has-depth</code>:</p>
+        <div class="example">
+          <div class="block">
+              <div class="button-group">
+                  <a class="button has-depth">Submit</a>
+                  <a class="button is-primary has-depth">Primary</a>
+                  <a class="button is-info has-depth">Information</a>
+                  <a class="button is-success has-depth">Success</a>
+                  <a class="button is-warning has-depth">Warning</a>
+                  <a class="button is-danger has-depth">Danger</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="button-group"&gt;
+  &lt;a class="button has-depth"&gt;Submit&lt;/a&gt;
+  &lt;a class="button has-depth is-primary"&gt;Primary&lt;/a&gt;
+  &lt;a class="button has-depth is-info"&gt;Information&lt;/a&gt;
+  &lt;a class="button has-depth is-success"&gt;Success&lt;/a&gt;
+  &lt;a class="button has-depth is-danger"&gt;Danger&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4 class="title">Icons</h4>
+        <p>Feel free to use any icon in conjunction with a button:</p>
+        <div class="example">
+          <div class="block">
+              <div class="button-group">
+                  <a class="button is-outline">
+                      <span class="icon">
+                          <i class="mdi mdi-play"></i>
+                      </span>                    
+                      <span>Watch Now</span>
+                  </a>
+                  <a class="button is-outline">
+                      <span>Watch Now</span>
+                      <span class="icon">
+                          <i class="mdi mdi-play"></i>
+                      </span>
+                  </a>
+                  <a class="button is-outline is-danger">
+                      <span>Delete</span>
+                      <span class="icon">
+                          <i class="mdi mdi-close"></i>
+                      </span>
+                  </a>
+                  <a class="button is-outline">
+                      <span>Follow</span>
+                      <span class="icon">
+                          <i class="mdi mdi-account-plus"></i>
+                      </span>
+                  </a>
+              </div>
+          </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;!-- With Material Icons --&gt;
+&lt;div class="button-group"&gt;
+  &lt;a class="button is-outline"&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-play"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span&gt;Watch Now&gt;
+  &lt;/a&gt;
+  &lt;a class="button is-outline"&gt;
+    &lt;span&gt;Watch Now&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-play"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class="button is-outline is-danger"&gt;
+    &lt;span&gt;Delete&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-close"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class="button is-outline"&gt;
+    &lt;span&gt;Follow&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-account-plus"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/a&gt;</code></pre>
+
+
+        <p>There is also a special <code>is-animated</code> class that you can use:</p>
+        <div class="example">
+          <div class="block">
+              <div class="button-group">
+                  <a class="button is-outline is-animated">
+                      <span>Submit</span>
+                      <span class="icon">
+                          <i class="mdi mdi-chevron-right"></i>
+                      </span>
+                  </a>
+                  <a class="button is-outline is-animated">
+                      <span>Follow</span>
+                      <span class="icon">
+                          <i class="mdi mdi-account-plus"></i>
+                      </span>
+                  </a>
+                  <a class="button is-danger has-depth is-animated">
+                      <span>Delete</span>
+                      <span class="icon">
+                          <i class="mdi mdi-close"></i>
+                      </span>
+                  </a>
+              </div>
+          </div>
+        </div>
+        
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;!-- With Material Icons --&gt;
+&lt;div class="button-group"&gt;
+  &lt;a class="button is-outline is-animated"&gt;
+    &lt;span&gt;Submit&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-chevron-right"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class="button is-outline is-animated"&gt;
+    &lt;span&gt;Follow&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-account-plus"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class="button is-danger has-depth is-animated"&gt;
+    &lt;span&gt;Delete&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-close"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/a&gt;</code></pre>
+
+        <div class="customize">
+          <p><code>$color-button</code> Default font color for filled buttons when no <code>is-*</code> is specified.</p>
+          <p><code>$color-button-bg</code> Default background color for filled buttons.</p>
+          <p><code>$color-button-outline-border</code> Default border color for outline buttons when no <code>is-*</code> is specified.</p>
+          <p><code>$color-button-outline</code> Default font color for outline buttons.</p>
+        </div>
+    </div>
+    </main>
+        <script src="../luma.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

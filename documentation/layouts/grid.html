@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Luma - SCSS Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../luma.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,300i,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="http:////cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body class="doc">
+    <header class="hero">
+        <div class="hero__information">
+          <img src="images/logo.png" />
+          <h1>Luma</h1>
+          <h2>Lightweight, <strong>flex</strong>ible</h2>
+          <div class="button-group">
+            <a href="/luma/#overview" class="button is-outline is-light">Get Started</a>
+            <a href="https://github.com/D2Allaire/luma" class="button is-outline is-light">Github</a>
+          </div>
+        </div>
+    </header>
+    <main>
+      <nav class="nav has-depth">
+        <div class="container">
+          <div class="nav-left">
+            <a class="nav-item is-tab" href="/luma/#overview">Overview</a>
+            <a class="nav-item is-tab" href="/luma/base/typography">Base</a>
+            <a class="nav-item is-tab" href="/luma/elements/labels">Elements</a>
+            <a class="nav-item is-tab is-active">Layouts</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="nav sub-nav">
+          <div class="nav-left">
+            <a class="nav-item is-active">Grid</a>
+            <a class="nav-item" href="/luma/layouts/navigation">Navigation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Grid</h2>
+        <p>Luma is based on a Flexbox-Grid, which means that your are no longer bound by annoying float-based layouts. Simply specify a <code>row</code> and add as many columns as you need. They will automatically take up all the available space. You can of course also define fixed width percentages in the classic 12-grid system. A <code>column is-4</code> will take up exactly one third of the available space. You're also free to define an offset.</p>
+        <p>On mobile, all columns will automatically be displayed on top of each other.</p>
+        <div class="example">
+          <div class="row">
+              <div class="column is-4">
+                  <p class="alert is-info"><code>column is-4</code></p>
+              </div>
+              <div class="column is-8">
+                  <p class="alert is-info"><code>column is-8</code></p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="column is-6">
+                  <p class="alert is-info"><code>column is-6</code></p>
+              </div>
+              <div class="column is-2">
+                  <p class="alert is-info"><code>column is-2</code></p>
+              </div>
+              <div class="column">
+                  <p class="alert is-success"><code>column</code></p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="column">
+                  <p class="alert is-success"><code>column</code></p>
+              </div>
+              <div class="column">
+                  <p class="alert is-success"><code>column</code></p>
+              </div>
+              <div class="column">
+                  <p class="alert is-success"><code>column</code></p>
+              </div>
+              <div class="column">
+                  <p class="alert is-success"><code>column</code></p>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="column is-4">
+                  <p class="alert is-info"><code>column is-4</code></p>
+              </div>
+              <div class="column is-4 is-offset-4">
+                  <p class="alert is-info"><code>column is-4 is-offset-4</code></p>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="column is-8 is-offset-4">
+                  <p class="alert is-info"><code>column is-8 is-offset-4</code></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;!-- Automatic widths: --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="column"&gt;
+    I will take up one third automatically!
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    Same for me!
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    And me too.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Manually specified widths: --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="column is-4"&gt;
+    1/4th
+  &lt;/div&gt;
+  &lt;div class="column is-8"&gt;
+    1/8th
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- With offsets: --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="column is-4"&gt;
+    1/4th left
+  &lt;/div&gt;
+  &lt;div class="column is-4 is-offset-4"&gt;
+    1/4th right
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>If you anticipate that there will be more columns than will fit in a row, simply add the <code>is-multiline</code> class to the row, and it will automatically wrap.</p>
+
+        <div class="example">
+          <div class="row is-multiline">
+              <div class="column is-4">
+                  <p class="alert is-info"><code>column is-4</code></p>
+              </div>
+              <div class="column is-4">
+                  <p class="alert is-info"><code>column is-4</code></p>
+              </div>
+              <div class="column is-4">
+                  <p class="alert is-info"><code>column is-4</code></p>
+              </div>
+              <div class="column is-4">
+                  <p class="alert is-info"><code>column is-4</code></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="row is-multiline"&gt;
+  &lt;div class="column is-4"&gt;
+    1/4th
+  &lt;/div&gt;
+  &lt;div class="column is-4"&gt;
+    1/4th
+  &lt;/div&gt;
+  &lt;div class="column is-4"&gt;
+    1/4th
+  &lt;/div&gt;
+  &lt;div class="column is-4"&gt;
+    I will wrap onto the next line since there is no more space for me :(
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    </main>
+        <script src="../luma.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

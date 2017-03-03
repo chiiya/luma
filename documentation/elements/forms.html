@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Luma - SCSS Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../luma.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,300i,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    <link rel="stylesheet" href="http:////cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body class="doc">
+    <header class="hero">
+        <div class="hero__information">
+          <img src="images/logo.png" />
+          <h1>Luma</h1>
+          <h2>Lightweight, <strong>flex</strong>ible</h2>
+          <div class="button-group">
+            <a href="/luma/#overview" class="button is-outline is-light">Get Started</a>
+            <a href="https://github.com/D2Allaire/luma" class="button is-outline is-light">Github</a>
+          </div>
+        </div>
+    </header>
+    <main>
+      <nav class="nav has-depth">
+        <div class="container">
+          <div class="nav-left">
+            <a class="nav-item is-tab" href="/luma/#overview">Overview</a>
+            <a class="nav-item is-tab" href="/luma/base/typography">Base</a>
+            <a class="nav-item is-tab is-active">Elements</a>
+            <a class="nav-item is-tab" href="luma/layouts/grid">Layouts</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="nav sub-nav">
+          <div class="nav-left">
+            <a class="nav-item" href="/luma/elements/labels">Labels</a>
+            <a class="nav-item" href="/luma/elements/tables">Tables</a>
+            <a class="nav-item" href="/luma/elements/buttons">Buttons</a>
+            <a class="nav-item" href="/luma/elements/alerts">Alerts</a>
+            <a class="nav-item is-active">Forms</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Forms</h2>
+        <p>Why should forms be ugly? Luma provides custom styling for all common input elements.</p>
+        <form>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Send me a message"></textarea>
+            </div>
+            <div class="field">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I accept all the evil terms and conditions.</label>
+            </div>
+
+            <input type="submit" class="button is-outline" value="Submit">
+        </form>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;form&gt;
+  &lt;div class="field"&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" placeholder="Your Name"&gt;
+  &lt;/div&gt;
+  &lt;div class="field"&gt;
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea id="message" name="messae" placeholder="Send me a message"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div class="field"&gt;
+    &lt;input type="checkbox" id="terms" name="terms"&gt;
+    &lt;label for="terms"&gt;I accept all the evil terms and conditions.&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+        <h3>Form Elements</h3>
+
+        <h4 class="title">Text Inputs</h4>
+        <div class="field">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Title">
+        </div>
+        <div class="field">
+            <label for="title-disabled">Disabled</label>
+            <input type="text" id="title-disabled" name="title-disabled" placeholder="Help! I'm Disabled!" disabled>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="field"&gt;
+  &lt;label for="title"&gt;Title&lt;/label&gt;
+  &lt;input type="text" id="title" name="title" placeholder="Title"&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+  &lt;label for="title-disabled"&gt;Disabled&lt;/label&gt;
+  &lt;input type="text" id="title-disabled" name="title-disabled" disabled&gt;
+&lt;/div&gt;</code></pre>
+
+
+        <p>If you include the <a href="#" title="Luma Javascript">Luma Javascript</a> file, the textarea will automatically resize (shrink/expand) on user input.</p>
+        <div class="field">
+            <textarea placeholder="I've got big plans to expand!"></textarea>
+        </div>
+
+        <h4 class="title">Checkboxes</h4>
+        <p>Luma uses custom CSS checkboxes. Check them out:</p>
+        <div class="field">
+            <input type="checkbox" id="check" name="check">
+            <label for="check">Check 123</label>
+        </div>
+        <div class="field">
+            <input type="checkbox" id="check-disabled" name="check-disabled" disabled>
+            <label for="check-disabled">Disabled Checkbox</label>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="field"&gt;
+  &lt;input type="checkbox" id="check" name="check"&gt;
+  &lt;label for="check"&gt;Check 123&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+  &lt;input type="checkbox" id="check-disabled" name="check-disabled" disabled&gt;
+  &lt;label for="check-disabled"&gt;Disabled Checkbox&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+
+        <h4 class="title">Radios</h4>
+        <p>Luma also uses custom CSS radios:</p>
+        <div class="field">
+            <input type="radio" id="radio1" name="radios">
+            <label for="radio1">Option 1</label>
+        </div>
+        <div class="field">
+            <input type="radio" id="radio2" name="radios">
+            <label for="radio2">Option 2</label>
+        </div>
+        <div class="field">
+            <input type="radio" id="radio3" name="radios" disabled>
+            <label for="radio3">Disabled Option 3</label>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="field"&gt;
+  &lt;input type="radio" id="radio1" name="radios"&gt;
+  &lt;label for="radio1"&gt;Option 1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+  &lt;input type="radio" id="radio2" name="radios"&gt;
+  &lt;label for="radio2"&gt;Option 2&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+  &lt;input type="radio" id="radio3" name="radios"&gt;
+  &lt;label for="radio3"&gt;Disabled Option 3&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4 class="title">Selects</h4>
+        <div class="row">
+          <div class="column is-4">
+            <div class="field">
+              <select>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option disabled>Option 3 Disabled</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="field"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;option disabled&gt;Option 3 Disabled&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4 class="title">File Uploads</h4>
+        <div class="file-field">
+          <label for="file" class="button is-outline">
+            <span>Upload</span>
+            <span class="icon">
+              <i class="mdi mdi-cloud-upload"></i>
+            </span>
+          </label>
+        <input type="file" id="file">
+        <div class="file-path">Please select a file</div>
+      </div>
+
+        <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;div class="file-field"&gt;
+  &lt;label for="file" class="button is-outline"&gt;
+    &lt;span&gt;Upload&lt;/span&gt;
+    &lt;span class="icon"&gt;
+      &lt;i class="mdi mdi-cloud-upload"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/label/gt;
+
+  &lt;input type="file" id="file"&gt;
+  &lt;div class="file-path"&gt;Please select a file&lt;/div&gt,
+&lt;/div&gt;</code></pre>
+
+        <p>For the custom selects and file uploads the <a href="#" title="Luma Javascript">Luma Javascript</a> is required.</p>
+
+        <div class="customize">
+          <p><code>$color-checkmark</code> Color of the checkmark itself (white by default)</p>
+          <p><code>$color-checkbox</code> Color of the background of a checked checkbox</p>
+          <p><code>$color-radio</code> Marked radio background color</p>
+          <p><code>$color-select-bg</code> Background color of the select list</p>
+          <p><code>$color-selected-bg</code> Background color on select option hover</p>
+        </div>
+    </div>
+    </main>
+        <script src="../luma.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
