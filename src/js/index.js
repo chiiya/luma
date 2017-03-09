@@ -10,8 +10,8 @@ function displayFileName(el) {
 }
 
 window.onload = () => {
-  if (document.getElementsByTagName('select').length > 0) {
-    styleSelect('select');
+  if (document.getElementsByClassName('.select').length > 0) {
+    styleSelect('.select');
   }
 
   // Resize Textareas
