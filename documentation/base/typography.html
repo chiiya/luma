@@ -50,6 +50,7 @@
             <a class="nav-item is-active">Typography</a>
             <a class="nav-item" href="/luma/base/code">Code</a>
             <a class="nav-item" href="/luma/base/lists">Lists</a>
+            <a class="nav-item" href="/luma/base/tables">Tables</a>
           </div>
         </div>
       </div>
@@ -128,15 +129,17 @@ Some &lt;span class="mark"&gt;highlighted&lt;/span&gt; text.</code></pre>
         </div>  
     
         <h4 class="title">Links</h4>
-        <p>By default, links will the displayed <a href="">like this</a>. If you wish, you can add the special <code class="code">link</code> class to add a background-color effect: <a class="link">Example</a>. You can easily customize the color with the <code>$color-link-highlight</code> variable.</p>
+        <p>By default, links will the displayed <a href="">like this</a>. If you wish, you can add the special <code class="code">link</code> class to add an <a href="#!" class="link">underline</a> or even use the special <code>highlight</code> class to add a background-color effect: <a class="highlight">Example</a>. You can easily customize the color with the <code>$color-link-highlight</code> variable.</p>
 
         <div class="code-header">
           <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
         </div>
         <pre><code class="html">&lt;!-- Simple link: --&gt;
 Just a simple &lt;a href="#"&gt;link&lt;/a&gt;.
+&lt;!-- Underline: --&gt;
+A link with &lt;a class="link"&gt;underline&lt;/a&gt;.
 &lt;!-- Highlight effect: --&gt;
-Some &lt;a class="link"&gt;fancy hightlight&lt;/a&gt; effect.</code></pre>
+Some &lt;a class="highlight"&gt;fancy hightlight&lt;/a&gt; effect.</code></pre>
 
         <div class="customize">
           <p><code>$color-link</code> Default link color.</p>

@@ -98,12 +98,16 @@ $breakpoints: (
 
 // Forms
 //-------------------------------------
-
 $color-checkbox: shade($color-light, 50%) !default;
 $color-radio: shade($color-light, 50%) !default;
 $color-checkmark: #fff !default;
 $color-selected-bg: #f2f4f8 !default;
 $color-select-bg: #fff !default;
+
+// Lists
+//-------------------------------------
+$color-collection-border: #e0e0e0 !default;
+
 
 // Navigation
 //-------------------------------------
@@ -111,3 +115,12 @@ $color-nav-bg: #fff !default;
 $nav-height: 5rem !default;
 $color-nav-text: tint($color-text, 20%) !default;
 $color-nav-text-hover: $color-dark !default;
+
+// Cards
+//-------------------------------------
+$color-card-bg: #fff !default;
+$color-card-meta: rgba(0, 0, 0, .4) !default;
+$color-card-light: #fff !default;
+$color-card-meta-light: rgba(255, 255, 255, .6) !default;
+$color-card-action-border-light: rgba(255, 255, 255, .08) !default;
+$color-card-action-light: rgba(255, 255, 255, .6) !default;

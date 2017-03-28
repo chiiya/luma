@@ -5,12 +5,12 @@
 //
 
 .label {
-  align-items: center;
   background-color: $color-bg-label;
-  border-radius: .8rem;
+  border-radius: .6rem;
   color: $color-text-light;
   display: inline-flex;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 300;
   height: 2rem;
   justify-content: center;
   padding: .2rem 1rem;

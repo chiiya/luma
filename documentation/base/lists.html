@@ -45,6 +45,7 @@
             <a class="nav-item" href="/luma/base/typography">Typography</a>
             <a class="nav-item" href="/luma/base/code">Code</a>
             <a class="nav-item is-active">Lists</a>
+            <a class="nav-item" href="/luma/base/tables">Tables</a>
           </div>
         </div>
       </div>
@@ -92,7 +93,64 @@
   &lt;dt&gt;Description list item 1&lt;/dt&gt;
   &lt;dd&gt;Description list item 1.1&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
+
+      <h3>Collections</h3>
+      <p>Lists can also be formatted as collections, with additional information:</p>
+      <ul class="collection">
+        <li class="item">Peter</li>
+        <li class="item">Marvin</li>
+        <li class="item">Anabelle</li>
+        <li class="item">Peatrice</li>
+      </ul>
+
+      <div class="collection">
+        <div class="item has-image">
+          <img src="../images/soranowoto.jpg" alt="Sora No Woto" />
+          <a href="https://myanimelist.net/anime/6802/So_Ra_No_Wo_To"><span class="item-title">Sora No Woto</span></a>
+          <p><em>Slice of Life, Drama, Music, Military</em>
+          <span>Watched 8 months ago, scored <strong>9/10</strong></span></p>
+        </div>
+        <div class="item has-image">
+          <img src="../images/erased.jpg" alt="Erased" />
+          <a href="https://myanimelist.net/anime/31043/Boku_dake_ga_Inai_Machi"><span class="item-title">Erased</span></a>
+          <p><em>Drama, Thriller, Seinen</em>
+          <span>Watched 10 months ago, scored <strong>9/10</strong></span></p>
+        </div>
+        <div class="item has-image">
+          <img src="../images/poco.jpg" alt="Poco's Udon World" />
+          <a href="https://myanimelist.net/anime/32673/Udon_no_Kuni_no_Kiniro_Kemari"><span class="item-title">Poco's Udon World</span></a>
+          <p><em>Slice of Life, Fantasy, Seinen</em>
+          <span>Watched 2 months ago, scored <strong>9/10</strong></span></p>
+        </div>
+        <div class="item has-image">
+          <img src="../images/demichan.jpg" alt="Demi-chan wa Kataritai" />
+          <a href="https://myanimelist.net/anime/33988/Demi-chan_wa_Kataritai"><span class="item-title">Demi-chan wa Kataritai</span></a>
+          <p><em>Slice of Life, Fantasy, Seinen</em>
+          <span>Watched 5 days ago, scored <strong>9/10</strong></span></p>
+        </div>
     </div>
+
+    <div class="code-header">
+          <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
+        </div>
+        <pre><code class="html">&lt;ul class="collection"&gt;
+  &lt;li class="item"&gt;Peter&lt;/li&gt;
+  &lt;li class="item"&gt;Marvin&lt;/li&gt;
+  &lt;li class="item"&gt;Anabelle&lt;/li&gt;
+  &lt;li class="item"&gt;Peatrice&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- With image and header --&gt;
+&lt;div class="collection"&gt;
+  &lt;div class="item has-image"&gt; 
+    &lt;img src="../images/soranowoto.jpg" alt="Sora No Woto" /&gt;
+    &lt;a href="https://myanimelist.net/anime/6802/So_Ra_No_Wo_To"&gt;&lt;span class="item-title">Sora No Woto&lt;/span&gt;&lt;/a&gt;
+    &lt;p&gt;&lt;em&gt;Slice of Life, Drama, Music, Military&lt;/em&gt;
+    &lt;span&gt;Watched 8 months ago, scored &lt;strong&gt;9/10&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
     </main>
         <script src="../luma.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>

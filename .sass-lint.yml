@@ -13,3 +13,6 @@ rules:
   no-qualifying-elements:
     - 1
     - allow-element-with-attribute: true
+  nesting-depth:
+    - 1
+    - max-depth: 3

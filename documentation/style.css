@@ -192,3 +192,43 @@ h2, h3 {
 .row + .code-header {
   margin-top: 20px;
 }
+
+
+.item p span:before {
+  padding: 0 10px;
+  content: "–";
+}
+
+.row + h3 {
+  margin-top: 2rem;
+}
+
+.card .label {
+  opacity: .8;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.card .label:hover {
+  opacity: 1;
+}
+
+.card .label + .label {
+  margin-left: 5px;
+}
+
+/*.card.horizontal .card-image {
+  min-width: 65px;
+  height: 175px;
+  overflow: hidden;
+}
+
+.card.horizontal .card-image img {
+  height: 221px;
+  width: 144px;
+  margin: -20px 0 0 -30px;
+}*/
+
+.row + p {
+  margin: 2rem 0 1rem 0;
+}

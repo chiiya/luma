@@ -50,8 +50,8 @@ gulp.task('default', ['watch']);
  * Run the serve task and then start watching for changes.
  */
 gulp.task('watch', ['build'], () => {
-  gulp.watch(config.sass, ['sass']);
-  gulp.watch(config.scripts, ['scripts']);
+  gulp.watch(config.sass, ['copy-css']);
+  gulp.watch(config.scripts, ['copy-scripts']);
 });
 
 /**
