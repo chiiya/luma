@@ -15,7 +15,7 @@ const cleanCSS = require('gulp-clean-css');
 const paths = {
   src: './src',
   build: './dist',
-  docs: './documentation'
+  docs: './documentation',
 };
 const config = {
   projectName: 'luma',
@@ -47,11 +47,11 @@ gulp.task('build', ['copy-css', 'copy-js']);
 gulp.task('default', ['watch']);
 
 /**
- * Run the serve task and then start watching for changes.
+ * Run the build task and then start watching for changes.
  */
 gulp.task('watch', ['build'], () => {
   gulp.watch(config.sass, ['copy-css']);
-  gulp.watch(config.scripts, ['copy-scripts']);
+  gulp.watch(config.scripts, ['copy-js']);
 });
 
 /**
@@ -87,7 +87,7 @@ gulp.task('sass:lint', () => {
 /**
  * Compile ES6 Javascript and bundle it together.
  */
-gulp.task('scripts', ['scripts:lint'], () => {
+gulp.task('scripts', () => {
   return browserify(config.browserify)
     .transform(babelify.configure(config.babelify))
     .bundle()

@@ -1,0 +1,63 @@
+//
+//--------------------------------------------------------------------------
+// Pagination - Luma
+//--------------------------------------------------------------------------
+//
+
+.paginator {
+  li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &.filled .paginator-item-link {
+    background-color: $color-paginator-bg;
+    border: 0;
+    color: $color-paginator-filled;
+    padding: .6rem 1.5rem;
+    transition: background-color .2s ease-in-out;
+
+    &.active {
+      background-color: $color-success;
+
+      &:hover {
+        background-color: $color-success;
+      }
+    }
+
+    &:hover {
+      background-color: $color-paginator-bg-hover;
+      color: $color-paginator-filled;
+    }
+  }
+}
+
+.paginator-item-link {
+  border: 1px solid $color-paginator-border;
+  border-radius: .3rem;
+  color: $color-paginator;
+  display: block;
+  font-size: 1.5rem;
+  padding: .5rem 1.4rem;
+  text-decoration: none;
+  transition: border-color .2s ease-in-out;
+
+  &:hover {
+    border-color: shade($color-paginator-border, 40%);
+    color: shade($color-paginator, 30%);
+  }
+
+  &.active {
+    background-color: $color-paginator-bg-active;
+    border-color: $color-paginator-bg-active;
+    color: $color-paginator-filled;
+
+    &:hover {
+      border-color: $color-paginator-bg-active;
+      color: $color-paginator-filled;
+    }
+  }
+}

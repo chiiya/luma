@@ -232,3 +232,7 @@ h2, h3 {
 .row + p {
   margin: 2rem 0 1rem 0;
 }
+
+.spinner {
+  margin: 0 auto;
+}

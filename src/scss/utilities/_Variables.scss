@@ -124,3 +124,17 @@ $color-card-light: #fff !default;
 $color-card-meta-light: rgba(255, 255, 255, .6) !default;
 $color-card-action-border-light: rgba(255, 255, 255, .08) !default;
 $color-card-action-light: rgba(255, 255, 255, .6) !default;
+
+// Paginator
+//-------------------------------------
+$color-paginator-bg: #363636 !default;
+$color-paginator-bg-hover: #46637f !default;
+$color-paginator: $color-primary !default;
+$color-paginator-filled: #fff !default;
+$color-paginator-border: #adadad !default;
+$color-paginator-bg-active: $color-primary !default;
+
+// Loading Spinner
+//-------------------------------------
+$spinner-size: 5rem !default;
+$color-spinner: $color-primary !default;

@@ -11,7 +11,7 @@ rules:
   force-pseudo-nesting: 0
   no-mergeable-selectors: 0
   no-qualifying-elements:
-    - 1
+    - 0
     - allow-element-with-attribute: true
   nesting-depth:
     - 1

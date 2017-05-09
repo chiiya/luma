@@ -42,36 +42,34 @@
       <div class="container">
         <div class="nav sub-nav">
           <div class="nav-left">
-            <a class="nav-item is-active">Labels</a>
+            <a class="nav-item" href="/luma/elements/labels">Labels</a>
             <a class="nav-item" href="/luma/elements/buttons">Buttons</a>
             <a class="nav-item" href="/luma/elements/alerts">Alerts</a>
             <a class="nav-item" href="/luma/elements/cards">Cards</a>
-            <a class="nav-item" href="/luma/elements/spinner">Loading Spinner</a>
+            <a class="nav-item is-active">Loading Spinner</a>
           </div>
         </div>
       </div>
 
       <div class="container">
-        <h2>Labels</h2>
-        <p>Use Labels to tag your content. They could also be used as notification badges.</p>
-        <div class="example">
-            <p><span class="label">Drama</span> <span class="label">Action</span>
-            <span class="label is-primary">Primary</span> <span class="label is-info">Info</span> <span class="label is-success">Success</span> <span class="label is-warning">Warning</span> <span class="label is-danger">Danger</span></p>
+        <h2>Loading Spinner</h2>
+        <p>You can use the loading spinner whenever you're dynamically loading content.</p>
+        <div class="spinner">
+          <div class="pulse"></div>
+          <div class="pulse"></div>
         </div>
 
         <div class="code-header">
           <span class="code-header-icon"><i class="mdi mdi-code-tags"></i></span>
         </div>
-        <pre><code class="html">&lt;span class="label"&gt;Drama&lt;/span&gt;
-&lt;span class="label"&gt;Action&lt;/span&gt;
-&lt;span class="label is-primary"&gt;Primary&lt;/span&gt;
-&lt;span class="label is-info"&gt;Info&lt;/span&gt;
-&lt;span class="label is-success"&gt;Success&lt;/span&gt;
-&lt;span class="label is-warning"&gt;Warning&lt;/span&gt;
-&lt;span class="label is-danger"&gt;Danger&lt;/span&gt;</code></pre>
+        <pre><code class="html">&lt;div class="spinner"&gt;
+  &lt;div class="pulse"&gt;&lt;/div&gt;
+  &lt;div class="pulse"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
         <div class="customize">
-          <p><code>$color-bg-label</code> Default background color labels that is used when no <code>is-*</code> class is specified.</p>
+          <p><code>$color-spinner</code> Color for the loading spinner color. Defaults to <code>$color-primary</code>.</p>
+          <p><code>$spinner-size</code> Size of the loading spinner.</p>
         </div>
     </div>
     </main>

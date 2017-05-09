@@ -7,7 +7,7 @@
 .card {
   background: $color-card-bg;
   border-radius: .3rem;
-  box-shadow: 0 2px 10px 0 rgba(0,0,0,.05), 0 2px 20px 0 rgba(0,0,0,.05), 0 2px 4px -8px rgba(0,0,0,.1);
+  box-shadow: 0 2px 10px 0 transparent-dark(.05), 0 2px 20px 0 transparent-dark(.05), 0 2px 4px -8px transparent-dark(.1);
   display: flex;
   flex-direction: column;
 
@@ -45,13 +45,14 @@
       max-width: 150px;
     }
 
-    .card-content {
+    .card-body {
+      display: flex;
       flex: 1;
+      flex-direction: column;
     }
 
-    .card-action {
-      padding-left: 0;
-      padding-right: 0;
+    .card-content {
+      flex-grow: 1;
     }
   }
 }
@@ -76,7 +77,7 @@
 
 .card-action {
   align-items: center;
-  border-top: 1px solid rgba(0, 0, 0, .08);
+  border-top: 1px solid transparent-dark(.08);
   display: flex;
   padding: 1rem 1.5rem;
 
@@ -85,9 +86,9 @@
   }
 
   a {
-    color: rgba(0, 0, 0, 0.4);
-    font-weight: 300;
+    color: transparent-dark(.4);
     font-size: 1.5rem;
+    font-weight: 300;
 
     &:hover {
       color: $color-link;
