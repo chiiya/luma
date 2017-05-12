@@ -18,7 +18,6 @@
 <body class="doc">
     <header class="hero">
         <div class="hero__information">
-          <img src="images/logo.png" />
           <h1>Luma</h1>
           <h2>Lightweight, <strong>flex</strong>ible</h2>
           <div class="button-group">
@@ -45,67 +44,35 @@
             <a class="nav-item" href="/luma/layouts/grid">Grid</a>
             <a class="nav-item" href="/luma/layouts/forms">Forms</a>
             <a class="nav-item" href="/luma/layouts/navigation">Navigation</a>
-            <a class="nav-item is-active">Pagination</a>
-            <a class="nav-item" href="/luma/layouts/modals">Modals</a>
+            <a class="nav-item" href="/luma/layouts/pagination">Pagination</a>
+            <a class="nav-item is-active">Modals</a>
           </div>
         </div>
       </div>
 
       <div class="container">
-        <h2>Pagination</h2>
-        <p>Luma provides some simple paginators:</p>
+        <h2>Modals</h2>
+        <p>You can use modals to prompt user actions.</p>
         
-        <ul class="paginator filled">
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">
-              <i class="mdi mdi-chevron-left"></i> Previous
-            </a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">1</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link active">2</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">3</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">4</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">
-              <i class="mdi mdi-chevron-right"></i> Next
-            </a>
-          </li>
-        </ul>
+        <a class="lm-modal-trigger button is-success">Open Modal</a>
 
-
-        <ul class="paginator">
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">
-              <i class="mdi mdi-chevron-left"></i> Previous
-            </a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">1</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">2</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link active">3</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">4</a>
-          </li>
-          <li class="paginator-item">
-            <a href="#!" class="paginator-item-link">
-              <i class="mdi mdi-chevron-right"></i> Next
-            </a>
-          </li>
-        </ul>
-        
+        <div class="lm-modal" role="alert">
+          <div class="lm-modal-container">
+            <div class="lm-modal-title">
+              Modal Title
+              <a href="#0" class="lm-modal-close">Close</a>
+            </div>
+            <div class="lm-modal-body">
+              <p>Are you sure you want to delete this element?</p>
+            </div>
+            <div class="lm-modal-action">
+              <div class="button-group">
+                <button class="button is-outline is-narrow lm-close">Cancel</button>
+                <button class="button is-danger is-narrow">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
         
     </div>
     </main>
