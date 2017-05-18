@@ -49,8 +49,7 @@ if (document.getElementsByClassName('lm-modal').length > 0) {
   // Close Modal
   [].forEach.call(document.querySelectorAll('.lm-modal'), (modal) => {
     modal.addEventListener('click', (e) => {
-      if (hasClass(e.target, 'lm-modal-close') || hasClass(e.target, 'lm-modal')
-        || hasClass(e.target, 'lm-close')) {
+      if (hasClass(e.target, 'lm-modal-close') || hasClass(e.target, 'lm-modal')) {
         e.preventDefault();
         modal.classList.remove('is-visible');
       }
