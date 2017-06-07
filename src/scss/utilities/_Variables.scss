@@ -141,6 +141,6 @@ $color-spinner: $color-primary !default;
 
 // Modals
 //-------------------------------------
-$color-bg-modal: rgba(94, 110, 141, .5);
-$color-modal: #fff;
-$color-modal-close: #c6c6c6;
+$color-bg-modal: rgba(94, 110, 141, .5) !default;
+$color-modal: #fff !default;
+$color-modal-close: #c6c6c6 !default;

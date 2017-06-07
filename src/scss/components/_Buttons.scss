@@ -4,6 +4,15 @@
 //--------------------------------------------------------------------------
 //
 
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
 
 .button {
   // Default Style
@@ -28,22 +37,46 @@
 
   &.is-primary {
     @include btn($color-primary-inverted, $color-primary);
+
+    &:disabled {
+      background-color: lighten($color-primary, 20%);
+    }
   }
 
   &.is-info {
     @include btn(#fff, $color-info);
+
+    &:disabled {
+      background-color: lighten($color-info, 20%);
+    }
   }
 
   &.is-success {
     @include btn(#fff, $color-success);
+
+    &:disabled {
+      background-color: lighten($color-success, 20%);
+    }
   }
 
   &.is-warning {
     @include btn($color-dark, $color-warning);
+
+    &:disabled {
+      background-color: lighten($color-warning, 20%);
+    }
   }
 
   &.is-danger {
     @include btn(#fff, $color-danger);
+
+    &:disabled {
+      background-color: lighten($color-danger, 20%);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 
   &.is-outline {
@@ -67,8 +100,8 @@
 
       &:hover,
       &:active {
-        border-color: $color-checkmark;
-        color: $color-checkmark;
+        border-color: darken($color-light, 20%);
+        color: darken($color-light, 20%);
       }
     }
 
@@ -130,6 +163,38 @@
     height: 3rem;
     padding: 0 1rem;
     padding-top: 2px;
+  }
+
+  &.is-loading {
+    pointer-events: none;
+
+    &::before {
+      -webkit-animation: spinAround 500ms infinite linear;
+      animation: spinAround 500ms infinite linear;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: '';
+      display: inline-block;
+      height: 13px;
+      margin-bottom: 1px;
+      margin-right: 10px;
+      vertical-align: middle;
+      width: 13px;
+    }
+
+    &.is-empty {
+      color: transparent;
+      position: relative;
+
+      &::before {
+        left: calc(50% - 13px/2);
+        margin-right: 0;
+        position: absolute;
+        right: calc(50% - 13px/2);
+      }
+    }
   }
 
   &:focus,
