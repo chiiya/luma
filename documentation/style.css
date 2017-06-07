@@ -236,3 +236,19 @@ h2, h3 {
 .spinner {
   margin: 0 auto;
 }
+
+#search {
+  max-width: 200px;
+  border: 0;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  padding-left:35px;
+  color:gray;
+  background-image:url('images/search.png');
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-size: 20px;
+}
+
+.nav-example {
+  margin-bottom: 2rem;
+}

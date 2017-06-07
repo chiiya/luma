@@ -336,6 +336,8 @@ select[data-ss-uuid] {
     display: none;
     float: left;
     left: 0;
+    max-height: 300px;
+    overflow-y: auto;
     position: absolute;
     top: 98%;
     width: 100%;
