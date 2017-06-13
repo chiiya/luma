@@ -33,7 +33,11 @@ if (document.getElementsByClassName('file').length > 0) {
 
 // Style selects
 if (document.getElementsByClassName('select').length > 0) {
-  styleSelect('.select');
+  let select = document.querySelectorAll('.select');
+
+  [].forEach.call(select, function(el) {
+      styleSelect(el);
+  });
 }
 
 if (document.getElementsByClassName('lm-modal').length > 0) {
