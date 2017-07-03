@@ -214,5 +214,12 @@
     justify-content: flex-start;
     margin: 0 5px 5px 0;
 
+    &::last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.is-right {
+    justify-content: flex-end;
   }
 }
