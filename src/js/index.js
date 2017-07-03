@@ -1,6 +1,6 @@
 import styleSelect from './vendor/styleselect';
 
-function resizeTextarea(el) {
+function Textarea(el) {
   el.style.height = '';
   el.style.height = `${el.scrollHeight}px`;
 }
@@ -17,7 +17,7 @@ function hasClass(target, className) {
 if (document.getElementsByTagName('textarea').length > 0) {
   document.body.addEventListener('input', (event) => {
     if (event.target.tagName === 'TEXTAREA') {
-      resizeTextarea(event.target);
+      Textarea(event.target);
     }
   });
 }
@@ -36,7 +36,9 @@ if (document.getElementsByClassName('select').length > 0) {
   let select = document.querySelectorAll('.select');
 
   [].forEach.call(select, function(el) {
+    if (el.children.length > 0) {
       styleSelect(el);
+    } 
   });
 }
 
