@@ -9,6 +9,21 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+
+  &.is-horizontal {
+    align-items: center;
+    flex-direction: row;
+
+    > label {
+      font-weight: inherit;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    > *:not(:first-child) {
+      flex: 1 auto;
+    }
+  }
 }
 
 input[type='email'],
