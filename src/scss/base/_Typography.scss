@@ -24,7 +24,7 @@ h5,
 h6 {
   font-family: $font-heading;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   margin-top: 0;
 
   +.subtitle {
@@ -101,8 +101,6 @@ cite {
 }
 
 p {
-  font-family: $font-text;
-  font-weight: 300;
   margin-bottom: 1rem;
   margin-top: 0;
 }
@@ -143,8 +141,8 @@ a {
   }
 
   &.highlight {
-    background: transparent;
-    border: none;
+    border: 0;
+    box-shadow: inset 0 -5px 0 $color-link-highlight-bg;
     color: $color-link-highlight;
     display: inline-block;
     line-height: 2rem;
@@ -152,25 +150,12 @@ a {
     padding-right: .25rem;
     position: relative;
     text-decoration: none;
-    transition: .4s;
-    z-index: 10;
-    
-    &::before {
-      background: $color-link-highlight;
-      bottom: 0;
-      content: "";
-      display: block;
-      height: .2rem;
-      left: 0;
-      position: absolute;
-      transition: all .2s;
-      width: 100%;
-      z-index: -1;
-    }
+    transition: background .15s cubic-bezier(.33, .66, .66, 1);
 
     &:hover,
     &:focus {
-      color: #fff;
+      background: $color-link-highlight-bg;
+      color: $color-link-highlight-hover;
 
       &::before {
         height: 100%;
