@@ -60,15 +60,25 @@
   background-color: $bg;
   color: $color;
 
-  &:hover,
-  &:active {
+  &:hover {
     color: $color;
     @if ($bg == $color-warning or $bg == $color-danger) {
       background-color: shade($bg, 5%);
     } @else if ($bg == $color-dark) {
       background-color: tint($bg, 15%);
     } @else {
-      background-color: shade($bg, 15%);
+      background-color: shade($bg, 7%);
+    }
+  }
+
+  &:active {
+    color: $color;
+    @if ($bg == $color-warning or $bg == $color-danger) {
+      background-color: shade($bg, 7%);
+    } @else if ($bg == $color-dark) {
+      background-color: tint($bg, 20%);
+    } @else {
+      background-color: shade($bg, 12%);
     }
   }
 }
