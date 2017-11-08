@@ -4,60 +4,56 @@
 //--------------------------------------------------------------------------
 //
 
-.paginator {
-  li {
-    display: inline-block;
+.pagination {
+  display: flex;
+  list-style: none;
+  text-align: center;
 
-    &:not(:last-child) {
-      margin-right: 5px;
+  &.is-center {
+    justify-content: center;
+  }
+}
+
+.page-item {
+  display: block;
+
+  &:first-child {
+    .page-link {
+      border-bottom-left-radius: .4rem;
+      border-top-left-radius: .4rem;
+      margin-left: 0;
     }
   }
 
-  &.filled .paginator-item-link {
-    background-color: $color-paginator-bg;
-    border: 0;
-    color: $color-paginator-filled;
-    padding: .3rem 1.1rem;
-    transition: background-color .2s ease-in-out;
-
-    &.active {
-      background-color: $color-success;
-
-      &:hover {
-        background-color: $color-success;
-      }
+  &:last-child {
+    .page-link {
+      border-bottom-right-radius: .4rem;
+      border-top-left-radius: .4rem;
     }
+  }
 
-    &:hover {
-      background-color: $color-paginator-bg-hover;
-      color: $color-paginator-filled;
+  &.active {
+    .page-link {
+      background-color: $pagination-color-bg-active;
+      color: $pagination-color-link-active;
     }
   }
 }
 
-.paginator-item-link {
-  border: 1px solid $color-paginator-border;
-  border-radius: .3rem;
-  color: $color-paginator;
-  display: block;
-  font-size: 1.5rem;
-  padding: .2rem 1rem;
-  text-decoration: none;
-  transition: border-color .2s ease-in-out;
+.page-link {
+  border: 1px solid $pagination-color-border;
+  border-radius: 0;
+  color: $pagination-color-link;
+  display: inline-block;
+  line-height: 1.2;
+  margin-left: -1px;
+  padding: 1rem 1.6rem;
+  transition: none;
 
-  &:hover {
-    border-color: shade($color-paginator-border, 40%);
-    color: shade($color-paginator, 30%);
-  }
-
-  &.active {
-    background-color: $color-paginator-bg-active;
-    border-color: $color-paginator-bg-active;
-    color: $color-paginator-filled;
-
-    &:hover {
-      border-color: $color-paginator-bg-active;
-      color: $color-paginator-filled;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $pagination-color-bg-hover;
+    color: $pagination-color-link;
   }
 }
