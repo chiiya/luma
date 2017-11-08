@@ -1,0 +1,42 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin-right: .8rem;
+    padding-right: 2.8rem;
+    position: relative;
+
+    &::after {
+      color: $breadcrumbs-color-item;
+      content: "›";
+      font-family: "Arial", sans-serif;
+      font-size: 2rem;
+      height: 2rem;
+      line-height: 1;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      width: 2rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &.is-active {
+      a {
+        color: $breadcrumbs-color-item;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+}
