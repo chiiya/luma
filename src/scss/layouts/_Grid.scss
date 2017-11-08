@@ -38,7 +38,7 @@
     align-items: center;
   }
 
-  &.is-strech {
+  &.is-stretch {
     align-items: stretch;
   }
 
@@ -66,7 +66,7 @@
       align-self: center;
     }
 
-    &.is-strech {
+    &.is-stretch {
       align-self: stretch;
     }
 
@@ -99,6 +99,12 @@
         &.is-offset-#{$i} {
           margin-left: ($i / 12) * 100%;
         }
+      }
+    }
+
+    &.no-gutter {
+      .column {
+        padding: 0;
       }
     }
   }
