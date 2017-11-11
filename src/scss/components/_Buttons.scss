@@ -38,7 +38,8 @@
   &.is-primary {
     @include btn($color-primary-inverted, $color-primary);
 
-    &:disabled {
+    &:disabled,
+    &.is-disabled {
       background-color: lighten($color-primary, 20%);
     }
   }
@@ -46,7 +47,8 @@
   &.is-info {
     @include btn(#fff, $color-info);
 
-    &:disabled {
+    &:disabled,
+    &.is-disabled {
       background-color: lighten($color-info, 20%);
     }
   }
@@ -54,7 +56,8 @@
   &.is-success {
     @include btn(#fff, $color-success);
 
-    &:disabled {
+    &:disabled,
+    &.is-disabled {
       background-color: lighten($color-success, 20%);
     }
   }
@@ -62,7 +65,8 @@
   &.is-warning {
     @include btn($color-dark, $color-warning);
 
-    &:disabled {
+    &:disabled,
+    &.is-disabled {
       background-color: lighten($color-warning, 20%);
     }
   }
@@ -70,13 +74,16 @@
   &.is-danger {
     @include btn(#fff, $color-danger);
 
-    &:disabled {
+    &:disabled,
+    &.is-disabled {
       background-color: lighten($color-danger, 20%);
     }
   }
 
-  &:disabled {
+  &:disabled,
+  &.is-disabled {
     cursor: not-allowed;
+    pointer-events: none;
   }
 
   &.is-outline {
@@ -162,7 +169,6 @@
     font-size: 1.2rem;
     height: 3rem;
     padding: 0 1rem;
-    padding-top: 2px;
   }
 
   &.is-loading {
