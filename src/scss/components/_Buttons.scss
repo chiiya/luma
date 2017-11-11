@@ -83,7 +83,6 @@
   &:disabled,
   &.is-disabled {
     cursor: not-allowed;
-    pointer-events: none;
   }
 
   &.is-outline {
@@ -208,6 +207,10 @@
     outline: none;
   }
 
+}
+
+a.button.is-disabled {
+  pointer-events: none;
 }
 
 .button-group {
