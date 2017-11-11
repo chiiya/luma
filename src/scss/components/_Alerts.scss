@@ -8,6 +8,7 @@
   border-radius: .3rem;
   margin-bottom: 20px;
   padding: 15px;
+  position: relative;
   width: 100%;
 
   &.is-info {
@@ -28,6 +29,24 @@
   &.is-danger {
     background-color: $color-danger;
     color: tint($color-danger, 80%);
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    font-size: 22px;
+    font-style: normal;
+    opacity: .7;
+    right: 1rem;
+    top: 1.1rem;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &::before {
+      content: "×";
+    }
   }
 
 }
