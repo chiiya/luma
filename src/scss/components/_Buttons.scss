@@ -182,6 +182,44 @@
         margin-right: 0;
       }
     }
+
+    &.is-outline {
+      &::before {
+        border-bottom-color: $color-button-outline-border;
+        border-left-color: $color-button-outline-border;
+      }
+
+      &.is-primary {
+        &::before {
+          border-bottom-color: $color-primary;
+          border-left-color: $color-primary;
+        }
+      }
+      &.is-success {
+        &::before {
+          border-bottom-color: $color-success;
+          border-left-color: $color-success;
+        }
+      }
+      &.is-info {
+        &::before {
+          border-bottom-color: $color-info;
+          border-left-color: $color-info;
+        }
+      }
+      &.is-warning {
+        &::before {
+          border-bottom-color: $color-warning;
+          border-left-color: $color-warning;
+        }
+      }
+      &.is-danger {
+        &::before {
+          border-bottom-color: $color-danger;
+          border-left-color: $color-danger;
+        }
+      }
+    }
   }
 
   &:focus,
