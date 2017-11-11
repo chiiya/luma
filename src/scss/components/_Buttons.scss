@@ -164,7 +164,6 @@
     pointer-events: none;
 
     &::before {
-      -webkit-animation: spinAround 500ms infinite linear;
       animation: spinAround 500ms infinite linear;
       border: 2px solid #fff;
       border-radius: 100%;
@@ -173,21 +172,14 @@
       content: '';
       display: inline-block;
       height: 13px;
-      margin-bottom: 1px;
       margin-right: 10px;
       vertical-align: middle;
       width: 13px;
     }
 
     &.is-empty {
-      color: transparent;
-      position: relative;
-
       &::before {
-        left: calc(50% - 13px/2);
         margin-right: 0;
-        position: absolute;
-        right: calc(50% - 13px/2);
       }
     }
   }
