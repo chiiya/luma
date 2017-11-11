@@ -140,20 +140,17 @@
   }
 
   &.is-animated {
-    padding-right: 30px;
-    position: relative;
+    padding-right: 10px;
 
-    &:hover {
-      i {
-        right: 8%;
-      }
+    i::before {
+      transform: translateX(0);
+      transition: transform 150ms ease-out;
     }
 
-    i {
-      position: absolute;
-      right: 12%;
-      top: 13%;
-      transition: right 150ms ease-out;
+    &:hover {
+      i::before {
+        transform: translateX(3px);
+      }
     }
   }
 
