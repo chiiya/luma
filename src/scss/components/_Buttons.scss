@@ -129,13 +129,6 @@
   }
 
   i {
-
-    &.rotate-90 {
-      &::before {
-        transform: rotate(90deg);
-      }
-    }
-
     &::before {
       font-size: 1.7rem;
     }
@@ -159,7 +152,7 @@
     i {
       position: absolute;
       right: 12%;
-      top: 10%;
+      top: 13%;
       transition: right 150ms ease-out;
     }
   }
