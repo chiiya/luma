@@ -3,9 +3,13 @@ import Alert from './Alert';
 const luma = Object.create(null);
 luma.alert = (selector) => {
   if (typeof selector === 'object') {
-    new Alert(selector);
+    const close = selector.querySelector('.alert__close');
+    if (close) new Alert(close);
   } else {
-    Array.prototype.forEach.call(document.querySelectorAll(selector), (element) => { new Alert(element); });
+    Array.prototype.forEach.call(document.querySelectorAll(selector), (element) => {
+      const close = element.querySelector('.alert__close');
+      if (close) new Alert(close);
+    });
   }
 };
 
