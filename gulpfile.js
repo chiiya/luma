@@ -26,6 +26,7 @@ const config = {
   },
   browserify: {
     entries: [`${paths.src}/js/index.js`],
+    standalone: 'luma',
   },
   babelify: {
     presets: ['es2015'],
@@ -93,7 +94,7 @@ gulp.task('scripts', () => {
     .bundle()
     .pipe(source(`${config.projectName}.min.js`))
     .pipe(buffer())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(paths.build));
 });
 
