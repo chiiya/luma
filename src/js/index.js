@@ -1,80 +1,10 @@
-import styleSelect from './vendor/styleselect';
+import Alert from './Alert';
 
-function Textarea(el) {
-  el.style.height = '';
-  el.style.height = `${el.scrollHeight}px`;
+if (!NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+if (!HTMLCollection.prototype.forEach) {
+  HTMLCollection.prototype.forEach = Array.prototype.forEach;
 }
 
-function displayFileName(el) {
-  el.nextElementSibling.innerHTML = `File: ${el.value.replace(/^.*?([^\\/]*)$/, '$1')}`;
-}
-
-function hasClass(target, className) {
-  return new RegExp('(\\s|^)' + className + '(\\s|$)').test(target.className);
-}
-
-// Resize textareas on input
-if (document.getElementsByTagName('textarea').length > 0) {
-  document.body.addEventListener('input', (event) => {
-    if (event.target.tagName === 'TEXTAREA') {
-      Textarea(event.target);
-    }
-  });
-}
-
-// Display File Names for File Uploads
-if (document.getElementsByClassName('file').length > 0) {
-  document.body.addEventListener('change', (event) => {
-    if (event.target.type === 'file') {
-      displayFileName(event.target);
-    }
-  });
-}
-
-// Style selects
-if (document.getElementsByClassName('select').length > 0) {
-  let select = document.querySelectorAll('.select');
-
-  [].forEach.call(select, function(el) {
-    if (el.children.length > 0) {
-      styleSelect(el);
-    } 
-  });
-}
-
-if (document.getElementsByClassName('lm-modal').length > 0) {
-
-  // Open Modal
-  [].forEach.call(document.querySelectorAll('.lm-modal-trigger'), (modal) => {
-    modal.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector('.lm-modal').classList.add('is-visible');
-    }, false);
-  });
-
-  // Close Modal
-  [].forEach.call(document.querySelectorAll('.lm-modal'), (modal) => {
-    modal.addEventListener('click', (e) => {
-      if (hasClass(e.target, 'lm-modal-close') || hasClass(e.target, 'lm-modal')) {
-        e.preventDefault();
-        modal.classList.remove('is-visible');
-      }
-    }, false);
-  });
-
-  // Close Modal by ESC with browser fallback
-  document.onkeydown = (event) => {
-    const e = event || window.event;
-    let isEscape = false;
-    if ('key' in e) {
-      isEscape = (e.key === 'Escape' || e.key === 'Esc');
-    } else {
-      isEscape = (e.keyCode === 27);
-    }
-    if (isEscape) {
-      document.querySelector('.lm-modal').classList.remove('is-visible');
-    }
-  };
-}
-
-
+Array.prototype.forEach.call(document.querySelectorAll('[data-dismiss="alert"]'), (element) => { new Alert(element); });

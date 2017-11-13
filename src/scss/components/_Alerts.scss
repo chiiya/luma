@@ -7,8 +7,10 @@
 .alert {
   border-radius: .3rem;
   margin-bottom: 20px;
+  opacity: 1;
   padding: 15px;
   position: relative;
+  transition: opacity .5s linear;
   width: 100%;
 
   &.is-info {
@@ -33,6 +35,10 @@
 
   &.can-close {
     padding-right: 30px;
+  }
+
+  &.is-fading {
+    opacity: 0;
   }
 
   &__close {
