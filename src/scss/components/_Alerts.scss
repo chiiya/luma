@@ -31,7 +31,11 @@
     color: tint($color-danger, 80%);
   }
 
-  .close {
+  &.can-close {
+    padding-right: 30px;
+  }
+
+  &__close {
     cursor: pointer;
     position: absolute;
     font-size: 22px;
@@ -48,6 +52,5 @@
       content: "×";
     }
   }
-
 }
 
