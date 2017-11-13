@@ -14,6 +14,6 @@ export default class Alert {
 
   close() {
     this.alert.classList.add('is-fading');
-    setTimeout(() => { this.alert.remove(); }, 1000);
+    setTimeout(() => { this.alert.remove(); }, 300);
   }
 }
