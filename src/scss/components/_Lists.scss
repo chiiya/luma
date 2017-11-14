@@ -50,8 +50,7 @@ ul {
   position: relative;
 
   .item {
-    padding: 10px;
-    padding-left: 15px;
+    padding: 10px 10px 10px 15px;
 
     &.has-image {
       min-height: 50px;
@@ -76,7 +75,6 @@ ul {
 
     p {
       font-size: 1.4rem;
-      font-weight: 300;
       margin-bottom: 0;
     }
 
