@@ -16,7 +16,8 @@
   }
 
   &.has-white-text {
-    .card-content {
+    .card-content,
+    .card-content p {
       color: $color-card-light;
     }
 
@@ -31,7 +32,7 @@
         color: $color-card-action-light;
 
         &:hover {
-          color: tint($color-card-action-light, 40%);
+          color: tint($color-card-action-light, 60%);
         }
       }
     }
@@ -71,7 +72,6 @@
 .card-meta {
   color: $color-card-meta;
   font-size: 1.4rem;
-  font-weight: 300;
   margin-bottom: 1rem;
 }
 
@@ -88,7 +88,6 @@
   a {
     color: transparent-dark(.4);
     font-size: 1.5rem;
-    font-weight: 300;
 
     &:hover {
       color: $color-link;
