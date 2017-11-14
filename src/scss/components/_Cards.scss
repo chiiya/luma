@@ -43,7 +43,7 @@
 
     .card-image {
       flex: 1 1 auto;
-      max-width: 150px;
+      max-width: 160px;
     }
 
     .card-body {
@@ -60,6 +60,10 @@
 
 .card-content {
   padding: 1.5rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card-title {
