@@ -5,24 +5,27 @@
 //
 
 
-.field {
+.field,
+fieldset {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
 
-  &.is-horizontal {
+  &.is-centered  {
     align-items: center;
-    flex-direction: row;
-
-    > label {
-      font-weight: inherit;
-      margin-bottom: 0;
-      margin-right: 20px;
-    }
 
     > *:not(:first-child) {
       flex: 1 auto;
     }
+
+    label,
+    legend {
+      margin-bottom: 0;
+    }
+  }
+
+  &.row {
+    flex-direction: row;
   }
 }
 
@@ -302,7 +305,7 @@ input[type='radio'] {
 
 // Hide real select boxes which have seen styled.
 select[data-ss-uuid] {
-  display: none;
+  display: none !important;
   pointer-events: none;
 }
 
@@ -342,7 +345,7 @@ select[data-ss-uuid] {
       right: 2%;
       top: 26%;
     }
-	}
+  }
 
   .ss-dropdown {
     border: 1px solid transparent-dark(.15);
@@ -365,13 +368,13 @@ select[data-ss-uuid] {
 
       &.highlighted {
         background-color: $color-selected-bg;
-			}
+      }
 
       &.disabled {
         color: shade($color-light, 20%);
-			}
-		}
-	}
+      }
+    }
+  }
 
   &.open {
     .ss-selected-option {

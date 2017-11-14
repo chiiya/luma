@@ -1,4 +1,12 @@
 import Alert from './Alert';
+import Textarea from './Textarea';
+
+if (!NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+if (!HTMLCollection.prototype.forEach) {
+  HTMLCollection.prototype.forEach = Array.prototype.forEach;
+}
 
 const luma = Object.create(null);
 luma.alert = (selector) => {
@@ -12,13 +20,15 @@ luma.alert = (selector) => {
     });
   }
 };
-
-if (!NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = Array.prototype.forEach;
-}
-if (!HTMLCollection.prototype.forEach) {
-  HTMLCollection.prototype.forEach = Array.prototype.forEach;
-}
+luma.textarea = (selector) => {
+  if (typeof selector === 'object') {
+    Textarea.addInputListener(selector);
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll(selector), (element) => {
+      Textarea.addInputListener(element);
+    });
+  }
+};
 
 Array.prototype.forEach.call(document.querySelectorAll('[data-dismiss="alert"]'), (element) => { new Alert(element); });
 
