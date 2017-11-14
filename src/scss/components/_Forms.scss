@@ -397,25 +397,64 @@ select[data-ss-uuid] {
 // File Inputs
 //-------------------------------------
 
-.file-field {
-  display: block;
+.file {
+  user-select: none;
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
 
   input[type='file'] {
     height: .1px;
+    left: 0;
     opacity: 0;
+    outline: none;
     overflow: hidden;
     position: absolute;
+    top: 0;
     width: .1px;
     z-index: -1;
   }
 
-  .file-path {
-    color: tint($color-text, 50%);
-    font-size: 1.4rem;
-    overflow: hidden;
+  .button {
+    font-weight: normal;
+  }
 
-    input {
-      width: 100%;
+  &.has-name {
+    .button {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
     }
   }
+}
+
+.file__label {
+  align-items: stretch;
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.file__name {
+  align-items: center;
+  border: 1px solid $color-button-outline-border;
+  border-left-width: 0;
+  border-radius: 0 .3rem .3rem 0;
+  box-shadow: none;
+  color: $color-button-outline;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: normal;
+  height: 3.5rem;
+  letter-spacing: .05rem;
+  max-width: 24rem;
+  overflow: hidden;
+  padding: 6px 15px 5px 10px;
+  text-align: left;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
 }
