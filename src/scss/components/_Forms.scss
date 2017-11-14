@@ -122,7 +122,7 @@ input[type='checkbox'] {
       border-top: 2px solid transparent;
       height: 10px;
       left: 1px;
-      top: 4px;
+      top: 5px;
       transform: rotateZ(37deg);
       transform-origin: 100% 100%;
       width: 6px;
@@ -132,7 +132,7 @@ input[type='checkbox'] {
       background-color: $color-checkbox;
       border: 2px solid $color-checkbox;
       height: 15px;
-      top: 4px;
+      top: 5px;
       width: 15px;
       z-index: 0;
     }
@@ -153,7 +153,7 @@ input[type='checkbox'] {
       background-color: transparent;
       border: 1px solid shade($color-light, 20%);
       height: 15px;
-      top: 4px;
+      top: 5px;
       width: 15px;
       z-index: 0;
     }
@@ -163,8 +163,9 @@ input[type='checkbox'] {
     color: $color-text;
     cursor: pointer;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: normal;
     height: 25px;
+    line-height: 1.7;
     margin-bottom: 0;
     padding-left: 35px;
     position: relative;
@@ -241,8 +242,9 @@ input[type='radio'] {
     color: $color-text;
     cursor: pointer;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: normal;
     height: 25px;
+    line-height: 1.7;
     padding-left: 35px;
     position: relative;
     transition: .28s ease;
@@ -324,7 +326,6 @@ select[data-ss-uuid] {
     color: $color-text;
     cursor: pointer;
     font-size: 1.5rem;
-    font-weight: 300;
     margin: 0;
     padding: 0;
 
