@@ -1,5 +1,6 @@
 import Alert from './Alert';
 import Textarea from './Textarea';
+import Select from './Select';
 
 if (!NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
@@ -9,6 +10,7 @@ if (!HTMLCollection.prototype.forEach) {
 }
 
 const luma = Object.create(null);
+
 luma.alert = (selector) => {
   if (typeof selector === 'object') {
     const close = selector.querySelector('.alert__close');
@@ -20,6 +22,7 @@ luma.alert = (selector) => {
     });
   }
 };
+
 luma.textarea = (selector) => {
   if (typeof selector === 'object') {
     Textarea.addInputListener(selector);
@@ -30,6 +33,18 @@ luma.textarea = (selector) => {
   }
 };
 
+luma.select = (selector) => {
+  if (typeof selector === 'object') {
+    Select.style(selector);
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll(selector), (element) => {
+      Select.style(element);
+    });
+  }
+};
+
 Array.prototype.forEach.call(document.querySelectorAll('[data-dismiss="alert"]'), (element) => { new Alert(element); });
+Array.prototype.forEach.call(document.querySelectorAll('[data-resize="textarea"]'), (element) => { Textarea.addInputListener(element); });
+Array.prototype.forEach.call(document.querySelectorAll('[data-style="select"]'), (element) => { Select.style(element); });
 
 module.exports = luma;
