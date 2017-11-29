@@ -7,9 +7,9 @@
 .nav {
   align-items: stretch;
   background-color: $color-nav-bg;
-  display: flex;
+  display: none;
   min-height: $nav-height;
-  z-index: 2;
+  padding: .8rem 1.6rem;
 
   & > .container {
     align-items: stretch;
@@ -25,6 +25,14 @@
         border-width: 3px;
       }
     }
+  }
+
+  &.is-transparent {
+    background-color: transparent;
+  }
+
+  @include tablet {
+    display: block;
   }
 }
 
@@ -71,14 +79,12 @@
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
-  font-weight: 300;
   height: 100%;
   justify-content: center;
   padding: .5rem .75rem;
 
   img {
-    max-height: 2rem;
-    padding-right: .5rem;
+    max-height: ($nav-height - 2rem);
   }
 
   i {
@@ -87,6 +93,19 @@
     &:hover {
       color: $color-nav-text-hover;
     }
+  }
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  img {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    color: $color-nav-text !important;
   }
 }
 
@@ -100,20 +119,91 @@ a.nav-item {
     color: $color-nav-text-hover;
   }
 
-  &.is-tab {
-    border-bottom: 2px solid transparent;
-    padding-bottom: .3rem;
-
-    &:hover {
-      border-color: $color-primary;
-    }
-
-    &.is-active {
-      border-color: $color-primary;
-    }
-  }
-
   &.is-active {
     color: $color-nav-text-hover;
   }
+}
+
+.nav-mobile {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: normal;
+    padding: 3px 0;
+
+    a {
+      color: $color-primary;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: shade($color-primary, 20%);
+      }
+    }
+  }
+
+  .logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    span  {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.slideout-menu {
+  -webkit-overflow-scrolling: touch;
+  bottom: 0;
+  display: none;
+  min-height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  width: 256px;
+  z-index: 0;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  background-color: #fff;
+  min-height: 100vh;
+  position: relative;
+  will-change: transform;
+  z-index: 1;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
 }

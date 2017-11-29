@@ -120,7 +120,7 @@ $color-collection-border: #e0e0e0 !default;
 $color-nav-bg: #fff !default;
 $nav-height: 5rem !default;
 $color-nav-text: tint($color-text, 20%) !default;
-$color-nav-text-hover: #4a4b84 !default;
+$color-nav-text-hover: shade($color-link, 30%) !default;
 
 // Cards
 //-------------------------------------
