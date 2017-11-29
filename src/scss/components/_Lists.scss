@@ -9,7 +9,7 @@ ul,
 ol,
 dl {
   color: $color-text;
-  font-family: $font-text;
+  font-family: inherit;
   list-style: none;
   margin-bottom: 1rem;
   margin-top: 0;
