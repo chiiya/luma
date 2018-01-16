@@ -9,7 +9,11 @@
 //-------------------------------------
 
 // General
-$color-primary: #4a4b84 !default;
+
+// If set to true all user selections on the site will have a custom background color instead of the default blue. See /base/_Typography.scss Line 114-125
+$selection-on: true;
+
+$color-primary: #ec556c !default;
 $color-primary-inverted: #fff !default; // Change to a value that makes text look good on your primary-color
 $color-light: #e3e4e4 !default;
 $color-dark: #363636 !default;
@@ -23,7 +27,7 @@ $color-text: #586679 !default;
 $color-text-light: #fefefe !default;
 $color-title: lighten($color-text, 10%) !default;
 $color-link: #41b7d8;
-$color-link-highlight: $color-text !default;
+$color-link-highlight: $color-primary !default;
 $color-link-highlight-bg: $color-primary !default;
 $color-link-highlight-hover: #fff !default;
 $color-link-border: rgba(0, 0, 0, .1) !default;
