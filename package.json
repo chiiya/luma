@@ -1,8 +1,8 @@
 {
-  "name": "luma",
+  "name": "lumacss",
   "version": "0.1.0",
   "description": "Luma is a lightweight, flexbox-based CSS framework.",
-  "main": "luma.js",
+  "main": "src/js/index.js",
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack -p",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/D2Allaire/luma.git"
+    "url": "git+https://github.com/chiiya/luma.git"
   },
   "keywords": [
     "luma",
@@ -21,9 +21,9 @@
   "author": "Elisha Witte",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/D2Allaire/luma/issues"
+    "url": "https://github.com/chiiya/luma/issues"
   },
-  "homepage": "https://github.com/D2Allaire/luma#readme",
+  "homepage": "https://github.com/chiiya/luma#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.5",
     "babel-core": "^6.23.1",
