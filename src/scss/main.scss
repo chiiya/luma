@@ -1,13 +1,13 @@
 //
 //--------------------------------------------------------------------------
 // Luma
-// v0.1.0 2017
+// v0.1.0 2018
 //--------------------------------------------------------------------------
 //
 
-@import 'utilities/Mixins';
-@import 'utilities/Config';
-@import 'utilities/Variables';
+@import 'abstracts/Mixins';
+@import 'abstracts/Variables';
+@import 'abstracts/Config';
 @import 'base/normalize';
 @import 'base/Base';
 @import 'base/Utilities';
@@ -23,6 +23,6 @@
 @import 'components/Cards';
 @import 'layouts/Navigation';
 @import 'components/Breadcrumbs';
-@import 'layouts/Pagination';
+@import 'components/Pagination';
 
 @import 'vendor/hamburgers/hamburgers';

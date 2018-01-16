@@ -1,5 +1,0 @@
-Header Height: 800px
-Background Color: #f0f4f6
-Header Font Color: #fbdbfc
-Header 1: Thin / 72px
-Header 2: Light, Regular / 24px
