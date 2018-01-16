@@ -117,10 +117,19 @@ $color-collection-border: #e0e0e0 !default;
 
 // Navigation
 //-------------------------------------
+$nav-color-bg-responsive: #f9f9f9 !default;
 $color-nav-bg: #fff !default;
 $nav-height: 5rem !default;
 $color-nav-text: tint($color-text, 20%) !default;
 $color-nav-text-hover: shade($color-link, 30%) !default;
+
+$hamburger-layer-width: 25px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 4px;
+$hamburger-layer-color: #6c778e;
+$hamburger-types: (
+        spin,
+);
 
 // Cards
 //-------------------------------------
@@ -143,13 +152,4 @@ $pagination-color-link-active: #fff !default;
 //-------------------------------------
 $breadcrumbs-color-item: #586679 !default;
 
-// Loading Spinner
-//-------------------------------------
-$spinner-size: 5rem !default;
-$color-spinner: $color-primary !default;
 
-// Modals
-//-------------------------------------
-$color-bg-modal: rgba(94, 110, 141, .5) !default;
-$color-modal: #fff !default;
-$color-modal-close: #c6c6c6 !default;

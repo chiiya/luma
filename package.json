@@ -51,6 +51,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "hamburgers": "^0.9.3",
     "styleselect": "^1.0.3"
   }
 }

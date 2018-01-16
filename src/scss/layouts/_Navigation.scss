@@ -7,7 +7,7 @@
 .nav {
   align-items: stretch;
   background-color: $color-nav-bg;
-  display: none;
+  display: flex;
   min-height: $nav-height;
   padding: .8rem 1.6rem;
 
@@ -30,6 +30,30 @@
   &.is-transparent {
     background-color: transparent;
   }
+}
+
+.nav.is-toggle {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  .hamburger {
+    display: block;
+    padding: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
 
   @include tablet {
     display: flex;
@@ -124,9 +148,27 @@ a.nav-item {
   }
 }
 
-.nav-mobile {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
+.nav.is-responsive {
+  -webkit-overflow-scrolling: touch;
+  background-color: $nav-color-bg-responsive;
+  bottom: 0;
+  display: block;
+  left: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  transition: all 0.4s cubic-bezier(.4, 0, 0, 1);
+  transform: translate(-256px, 0);
+  width: 256px;
+  z-index: 10;
+
+  &.is-open {
+    border-right: 1px solid rgba(0,0,0,.1);
+    transform: translate(0, 0);
+  }
 
   ul {
     margin: 0;
@@ -134,7 +176,7 @@ a.nav-item {
 
   li {
     list-style: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: normal;
     padding: 3px 0;
 
@@ -168,42 +210,4 @@ a.nav-item {
   @include tablet {
     display: none;
   }
-}
-
-.slideout-menu {
-  -webkit-overflow-scrolling: touch;
-  bottom: 0;
-  display: none;
-  min-height: 100vh;
-  overflow-y: scroll;
-  position: fixed;
-  top: 0;
-  width: 256px;
-  z-index: 0;
-}
-
-.slideout-menu-left {
-  left: 0;
-}
-
-.slideout-menu-right {
-  right: 0;
-}
-
-.slideout-panel {
-  background-color: #fff;
-  min-height: 100vh;
-  position: relative;
-  will-change: transform;
-  z-index: 1;
-}
-
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
-  overflow: hidden;
-}
-
-.slideout-open .slideout-menu {
-  display: block;
 }

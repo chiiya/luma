@@ -59,4 +59,59 @@ Array.prototype.forEach.call(document.querySelectorAll('[data-resize="textarea"]
 Array.prototype.forEach.call(document.querySelectorAll('[data-style="select"]'), (element) => { Select.style(element); });
 Array.prototype.forEach.call(document.querySelectorAll('[data-display="file"]'), (element) => { File.addChangeListener(element); });
 
+/**
+ * Mobile burger menu button and gesture for toggling sidebar
+ */
+
+const closeNav = (sidebar, toggleButton) => {
+  toggleButton.classList.remove('is-active');
+  sidebar.classList.remove('is-open');
+};
+
+const openNav = (sidebar, toggleButton) => {
+  toggleButton.classList.add('is-active');
+  sidebar.classList.add('is-open');
+};
+
+const initMobileMenu = () => {
+  const mobileBar = document.querySelector('.nav.is-toggle');
+  const toggleButton = mobileBar.querySelector('.hamburger');
+  const sidebar = document.querySelector('.nav.is-responsive');
+
+  toggleButton.addEventListener('click', () => {
+    toggleButton.classList.toggle('is-active');
+    sidebar.classList.toggle('is-open');
+  });
+
+  document.body.addEventListener('click', (e) => {
+    if (!mobileBar.contains(e.target) && !sidebar.contains(e.target)) {
+      closeNav(sidebar, toggleButton);
+    }
+  });
+
+  // Toggle sidebar on swipe
+  const start = {};
+  const end = {};
+
+  document.body.addEventListener('touchstart', function (e) {
+    start.x = e.changedTouches[0].clientX;
+    start.y = e.changedTouches[0].clientY;
+  });
+
+  document.body.addEventListener('touchend', function (e) {
+    end.y = e.changedTouches[0].clientY;
+    end.x = e.changedTouches[0].clientX;
+
+    const xDiff = end.x - start.x;
+    const yDiff = end.y - start.y;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      if (xDiff > 0 && start.x <= 80) openNav(sidebar, toggleButton);
+      else closeNav(sidebar, toggleButton);
+    }
+  });
+};
+
+initMobileMenu();
+
 module.exports = luma;
