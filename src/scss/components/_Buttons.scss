@@ -39,7 +39,7 @@
 
     &:disabled,
     &.is-disabled {
-      background-color: lighten($color-primary, 20%);
+      background-color: tint($color-primary, 20%);
     }
   }
 
@@ -48,7 +48,7 @@
 
     &:disabled,
     &.is-disabled {
-      background-color: lighten($color-info, 20%);
+      background-color: tint($color-info, 20%);
     }
   }
 
@@ -57,7 +57,7 @@
 
     &:disabled,
     &.is-disabled {
-      background-color: lighten($color-success, 20%);
+      background-color: tint($color-success, 20%);
     }
   }
 
@@ -66,7 +66,7 @@
 
     &:disabled,
     &.is-disabled {
-      background-color: lighten($color-warning, 20%);
+      background-color: tint($color-warning, 20%);
     }
   }
 
@@ -75,7 +75,7 @@
 
     &:disabled,
     &.is-disabled {
-      background-color: lighten($color-danger, 20%);
+      background-color: tint($color-danger, 20%);
     }
   }
 
@@ -95,7 +95,7 @@
 
     &:hover,
     &:active {
-      border-color: lighten($color-dark, 30%);
+      border-color: tint($color-dark, 30%);
       color: $color-dark;
     }
 
