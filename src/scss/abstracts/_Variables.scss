@@ -11,7 +11,7 @@
 // General
 
 // If set to true all user selections on the site will have a custom background color instead of the default blue. See /base/_Typography.scss Line 114-125
-$selection-on: false;
+$selection-on: false !default;
 
 $color-primary: #ec556c !default;
 $color-primary-inverted: #fff !default; // Change to a value that makes text look good on your primary-color
@@ -79,14 +79,14 @@ $serif: (
         'Times New Roman',
         Times,
         serif
-);
+) !default;
 $monospace: (
         'Source Code Pro',
         Consolas,
         'Ubuntu Mono',
         Courier,
         monospace
-);
+) !default;
 
 $font-heading: $sans-serif !default;
 $font-text: $sans-serif !default;
@@ -104,7 +104,7 @@ $breakpoints: (
         'small': 768px,
         'medium': 992px,
         'large': 1225px,
-);
+) !default;
 
 // Forms
 //-------------------------------------
@@ -127,13 +127,13 @@ $nav-height: 5rem !default;
 $color-nav-text: tint($color-text, 20%) !default;
 $color-nav-text-hover: shade($color-link, 30%) !default;
 
-$hamburger-layer-width: 25px;
-$hamburger-layer-height: 3px;
-$hamburger-layer-spacing: 4px;
-$hamburger-layer-color: #6c778e;
+$hamburger-layer-width: 25px !default;
+$hamburger-layer-height: 3px !default;
+$hamburger-layer-spacing: 4px !default;
+$hamburger-layer-color: #6c778e !default;
 $hamburger-types: (
         spin,
-);
+) !default;
 
 // Cards
 //-------------------------------------
