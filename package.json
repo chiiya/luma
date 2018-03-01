@@ -1,6 +1,6 @@
 {
   "name": "lumacss",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Luma is a lightweight, flexbox-based CSS framework.",
   "style": "dist/luma.min.css",
   "sass": "src/scss/main.scss",
