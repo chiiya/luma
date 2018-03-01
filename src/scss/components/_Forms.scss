@@ -85,7 +85,7 @@ legend {
 // Checkboxes
 // Basically with slight adjustments from materializecss.com
 //-------------------------------------
-input[type='checkbox'] {
+.checkbox {
   &:checked,
   &:not(:checked) {
     left: -9999px;
@@ -210,7 +210,7 @@ input[type='checkbox'] {
 // Radios
 // Basically with slight adjustments from materializecss.com
 //-------------------------------------
-input[type='radio'] {
+.radio {
   &:not(:checked),
   &:checked {
     left: -9999px;
