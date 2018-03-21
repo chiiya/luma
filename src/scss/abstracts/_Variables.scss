@@ -108,7 +108,7 @@ $breakpoints: (
 
 // Forms
 //-------------------------------------
-$color-checkbox: shade($color-light, 50%) !default;
+$color-checkbox: $color-info !default;
 $color-radio: shade($color-light, 50%) !default;
 $color-checkmark: #fff !default;
 $color-selected-bg: #f2f4f8 !default;
