@@ -10,4 +10,7 @@ $shadow-2: rgba(0, 0, 0, .12);
   margin-left: auto;
 }
 
-
+.flex-group {
+  align-items: center;
+  display: flex;
+}
