@@ -164,7 +164,7 @@
 
     &::before {
       animation: spinAround 500ms infinite linear;
-      border: 2px solid #fff;
+      border: 2px solid $color-button-loading;
       border-radius: 100%;
       border-right-color: transparent;
       border-top-color: transparent;
@@ -194,24 +194,28 @@
           border-left-color: $color-primary;
         }
       }
+
       &.is-success {
         &::before {
           border-bottom-color: $color-success;
           border-left-color: $color-success;
         }
       }
+
       &.is-info {
         &::before {
           border-bottom-color: $color-info;
           border-left-color: $color-info;
         }
       }
+
       &.is-warning {
         &::before {
           border-bottom-color: $color-warning;
           border-left-color: $color-warning;
         }
       }
+
       &.is-danger {
         &::before {
           border-bottom-color: $color-danger;

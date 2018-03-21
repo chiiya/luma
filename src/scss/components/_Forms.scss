@@ -63,7 +63,7 @@ select {
 }
 
 select {
-  background: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+) no-repeat right .75rem center;
+  background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+') no-repeat right .75rem center;
   max-width: 100%;
   width: auto;
 }
@@ -293,7 +293,7 @@ legend {
 
 // Hide real select boxes which have seen styled.
 select[data-ss-uuid] {
-  display: none !important;
+  display: none;
   pointer-events: none;
 }
 
@@ -378,11 +378,11 @@ select[data-ss-uuid] {
 //-------------------------------------
 
 .file {
-  user-select: none;
   align-items: stretch;
   display: flex;
   justify-content: flex-start;
   position: relative;
+  user-select: none;
 
   input[type='file'] {
     height: .1px;
@@ -411,8 +411,8 @@ select[data-ss-uuid] {
 
 .file__label {
   align-items: stretch;
-  display: flex;
   cursor: pointer;
+  display: flex;
   justify-content: flex-start;
   margin-bottom: 0;
   overflow: hidden;

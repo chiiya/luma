@@ -16,3 +16,5 @@ rules:
   nesting-depth:
     - 1
     - max-depth: 3
+  class-name-format:
+    - convention: hyphenatedbem

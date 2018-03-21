@@ -56,36 +56,37 @@ $color-button: $color-light !default;
 $color-button-bg: $color-dark !default;
 $color-button-outline-border: #d7d7d7 !default;
 $color-button-outline: #808080 !default;
+$color-button-loading: #fff !default;
 
 
 // Typography
 //-------------------------------------
 $sans-serif: (
-        -apple-system,
-        system-ui,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        'Open Sans',
-        'Helvetica Neue',
-        sans-serif
+  -apple-system,
+  system-ui,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Open Sans',
+  'Helvetica Neue',
+  sans-serif
 ) !default;
 $serif: (
-        'Playfair Display',
-        Georgia,
-        'Times New Roman',
-        Times,
-        serif
+  'Playfair Display',
+  Georgia,
+  'Times New Roman',
+  Times,
+  serif
 ) !default;
 $monospace: (
-        'Source Code Pro',
-        Consolas,
-        'Ubuntu Mono',
-        Courier,
-        monospace
+  'Source Code Pro',
+  Consolas,
+  'Ubuntu Mono',
+  Courier,
+  monospace
 ) !default;
 
 $font-heading: $sans-serif !default;
@@ -100,10 +101,10 @@ $font-size-h6: 1.4rem !default;
 // Grid
 //-------------------------------------
 $breakpoints: (
-        'tiny': 480px,
-        'small': 768px,
-        'medium': 992px,
-        'large': 1225px,
+  'tiny': 480px,
+  'small': 768px,
+  'medium': 992px,
+  'large': 1225px,
 ) !default;
 
 // Forms
@@ -132,7 +133,7 @@ $hamburger-layer-height: 3px !default;
 $hamburger-layer-spacing: 4px !default;
 $hamburger-layer-color: #6c778e !default;
 $hamburger-types: (
-        spin,
+  spin,
 ) !default;
 
 // Cards
