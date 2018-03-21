@@ -169,7 +169,7 @@ legend {
       content: '';
       left: 0;
       position: absolute;
-      transition: border .15s, background-color .25s, width .2s .1s, height .2s .1s, top .2s .1s, left .2s .1s;
+      transition: background-color .25s cubic-bezier(.1, .71, .25, 1);
       z-index: 1;
     }
   }
@@ -398,6 +398,7 @@ select[data-ss-uuid] {
 
   .button {
     font-weight: normal;
+    height: 3.8rem;
   }
 
   &.has-name {
@@ -413,6 +414,7 @@ select[data-ss-uuid] {
   display: flex;
   cursor: pointer;
   justify-content: flex-start;
+  margin-bottom: 0;
   overflow: hidden;
   position: relative;
 }
@@ -428,7 +430,7 @@ select[data-ss-uuid] {
   display: block;
   font-size: 1.5rem;
   font-weight: normal;
-  height: 3.5rem;
+  height: 3.8rem;
   letter-spacing: .05rem;
   max-width: 24rem;
   overflow: hidden;
