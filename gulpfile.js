@@ -15,7 +15,6 @@ const cleanCSS = require('gulp-clean-css');
 const paths = {
   src: './src',
   build: './dist',
-  docs: './documentation',
 };
 const config = {
   projectName: 'luma',
@@ -40,7 +39,7 @@ const config = {
 /**
  * Run all tasks needed for a build.
  */
-gulp.task('build', ['copy-css', 'copy-js']);
+gulp.task('build', ['sass', 'scripts']);
 
 /**
  * Default task. Run the watch task
@@ -51,8 +50,8 @@ gulp.task('default', ['watch']);
  * Run the build task and then start watching for changes.
  */
 gulp.task('watch', ['build'], () => {
-  gulp.watch(config.sass, ['copy-css']);
-  gulp.watch(config.scripts, ['copy-js']);
+  gulp.watch(config.sass, ['sass']);
+  gulp.watch(config.scripts, ['scripts']);
 });
 
 /**
@@ -65,14 +64,6 @@ gulp.task('sass', ['sass:lint'], () => {
     .pipe(cleanCSS())
     .pipe(rename(`${config.projectName}.min.css`))
     .pipe(gulp.dest(paths.build));
-});
-
-/**
- * Copy the minified CSS file to the documentation folder
- */
-gulp.task('copy-css', ['sass'], () => {
-  return gulp.src(`${paths.build}/${config.projectName}.min.css`)
-    .pipe(gulp.dest(paths.docs));
 });
 
 /**
@@ -96,14 +87,6 @@ gulp.task('scripts', () => {
     .pipe(buffer())
     // .pipe(uglify())
     .pipe(gulp.dest(paths.build));
-});
-
-/**
- * Copy the minified JS file to the documentation folder
- */
-gulp.task('copy-js', ['scripts'], () => {
-  return gulp.src(`${paths.build}/${config.projectName}.min.js`)
-    .pipe(gulp.dest(paths.docs));
 });
 
 /**
