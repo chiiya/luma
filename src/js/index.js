@@ -116,4 +116,4 @@ const initMobileMenu = () => {
 
 initMobileMenu();
 
-module.exports = luma;
+export default luma;
