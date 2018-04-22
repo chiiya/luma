@@ -20,7 +20,7 @@
 
   &.is-success {
     background-color: $color-success;
-    color: shade($color-success, 50%);
+    color: $color-white;
   }
 
   &.is-warning {
