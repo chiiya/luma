@@ -81,12 +81,4 @@ ul {
       border-bottom: 1px solid $color-collection-border;
     }
   }
-
-  a {
-    border: 0;
-
-    &:hover {
-      color: shade($color-link, 20%);
-    }
-  }
 }
