@@ -15,22 +15,54 @@
 
   &.is-info {
     background-color: $color-info;
-    color: tint($color-info, 80%);
+    color: $alert-info-color;
+
+    a {
+      color: $alert-info-color;
+
+      &:hover {
+        color: $alert-info-color-hover;
+      }
+    }
   }
 
   &.is-success {
     background-color: $color-success;
-    color: $color-white;
+    color: $alert-success-color;
+
+    a {
+      color: $alert-success-color;
+
+      &:hover {
+        color: $alert-success-color-hover;
+      }
+    }
   }
 
   &.is-warning {
     background-color: $color-warning;
-    color: shade($color-warning, 50%);
+    color: $alert-warning-color;
+
+    a {
+      color: $alert-warning-color;
+
+      &:hover {
+        color: $alert-warning-color-hover
+      }
+    }
   }
 
   &.is-danger {
     background-color: $color-danger;
-    color: tint($color-danger, 80%);
+    color: $alert-danger-color;
+
+    a {
+      color: $alert-danger-color;
+
+      &:hover {
+        color: $alert-success-color-hover;
+      }
+    }
   }
 
   &.can-close {
@@ -61,6 +93,10 @@
 
   > p:last-child {
     margin-bottom: 0;
+  }
+
+  a {
+    font-weight: bold;
   }
 }
 
