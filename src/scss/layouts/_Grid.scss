@@ -10,12 +10,14 @@
     max-width: 750px;
   }
   @include desktop {
+    padding: 0;
     max-width: 960px;
   }
   @include widescreen {
     max-width: 1152px;
   }
 
+  padding: 0 2rem;
   margin: 0 auto;
   width: 100%;
 }
