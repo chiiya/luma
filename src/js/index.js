@@ -73,7 +73,7 @@ const openNav = (sidebar, toggleButton) => {
   sidebar.classList.add('is-open');
 };
 
-const initMobileMenu = () => {
+luma.nav = () => {
   const mobileBar = document.querySelector('.nav.is-toggle');
   const toggleButton = mobileBar.querySelector('.hamburger');
   const sidebar = document.querySelector('.nav.is-responsive');
@@ -89,31 +89,34 @@ const initMobileMenu = () => {
         closeNav(sidebar, toggleButton);
       }
     });
-
-    // Toggle sidebar on swipe
-    const start = {};
-    const end = {};
-
-    document.body.addEventListener('touchstart', function (e) {
-      start.x = e.changedTouches[0].clientX;
-      start.y = e.changedTouches[0].clientY;
-    });
-
-    document.body.addEventListener('touchend', function (e) {
-      end.y = e.changedTouches[0].clientY;
-      end.x = e.changedTouches[0].clientX;
-
-      const xDiff = end.x - start.x;
-      const yDiff = end.y - start.y;
-
-      if (Math.abs(xDiff) > Math.abs(yDiff)) {
-        if (xDiff > 0 && start.x <= 80) openNav(sidebar, toggleButton);
-        else closeNav(sidebar, toggleButton);
-      }
-    });
   }
 };
 
-initMobileMenu();
+luma.navSlideOut = () => {
+  // Toggle sidebar on swipe
+  const mobileBar = document.querySelector('.nav.is-toggle');
+  const toggleButton = mobileBar.querySelector('.hamburger');
+  const sidebar = document.querySelector('.nav.is-responsive');
+  const start = {};
+  const end = {};
+
+  document.body.addEventListener('touchstart', (e) => {
+    start.x = e.changedTouches[0].clientX;
+    start.y = e.changedTouches[0].clientY;
+  });
+
+  document.body.addEventListener('touchend', (e) => {
+    end.y = e.changedTouches[0].clientY;
+    end.x = e.changedTouches[0].clientX;
+
+    const xDiff = end.x - start.x;
+    const yDiff = end.y - start.y;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      if (xDiff > 0 && start.x <= 80) openNav(sidebar, toggleButton);
+      else closeNav(sidebar, toggleButton);
+    }
+  });
+};
 
 export default luma;
