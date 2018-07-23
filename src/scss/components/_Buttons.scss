@@ -93,10 +93,12 @@
     transition: all .3s;
     z-index: 1;
 
-    &:hover,
-    &:active {
-      border-color: tint($color-dark, 30%);
-      color: $color-dark;
+    &:not([disabled]):not(.is-disabled) {
+      &:hover,
+      &:active {
+        border-color: tint($color-dark, 30%);
+        color: $color-dark;
+      }
     }
 
     &.is-light {

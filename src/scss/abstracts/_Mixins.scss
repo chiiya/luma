@@ -87,11 +87,18 @@
   border: 1px solid $border;
   color: $color;
 
-  &:hover,
-  &:active {
-    background: $bg-hover;
-    border-color: $bg-hover;
-    color: $color-hover;
+  &:not([disabled]):not(.is-disabled) {
+    &:hover,
+    &:active {
+      background: $bg-hover;
+      border-color: $bg-hover;
+      color: $color-hover;
+    }
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background: none;
   }
 }
 
