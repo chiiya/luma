@@ -313,53 +313,6 @@ select[data-ss-uuid] {
     outline: 0;
   }
 
-  .ss-selected-option {
-    border: 1px solid transparent-dark(.15);
-    border-radius: .3rem;
-    padding: .6rem 1rem;
-
-    &::after {
-      background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+') no-repeat right .75rem center;
-      bottom: 0;
-      content: '';
-      display: block;
-      left: 0;
-      opacity: .4;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
-
-  .ss-dropdown {
-    border: 1px solid transparent-dark(.15);
-    border-top: 0;
-    box-shadow: 0 1px 3px transparent-dark(.1);
-    display: none;
-    float: left;
-    left: 0;
-    max-height: 300px;
-    overflow-y: auto;
-    position: absolute;
-    top: 98%;
-    width: 100%;
-    z-index: 100;
-
-    .ss-option {
-      background-color: $color-select-bg;
-      padding: .6rem 1rem;
-      width: 100%;
-
-      &.highlighted {
-        background-color: $color-selected-bg;
-      }
-
-      &.disabled {
-        color: shade($color-light, 20%);
-      }
-    }
-  }
-
   &.open {
     .ss-selected-option {
       border-bottom-color: transparent;
@@ -368,6 +321,53 @@ select[data-ss-uuid] {
     .ss-dropdown {
       display: block;
     }
+  }
+}
+
+.ss-selected-option {
+  border: 1px solid transparent-dark(.15);
+  border-radius: .3rem;
+  padding: .6rem 1rem;
+
+  &::after {
+    background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+') no-repeat right .75rem center;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.ss-dropdown {
+  border: 1px solid transparent-dark(.15);
+  border-top: 0;
+  box-shadow: 0 1px 3px transparent-dark(.1);
+  display: none;
+  float: left;
+  left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  top: 98%;
+  width: 100%;
+  z-index: 100;
+}
+
+.ss-option {
+  background-color: $color-select-bg;
+  padding: .6rem 1rem;
+  width: 100%;
+
+  &.highlighted {
+    background-color: $color-selected-bg;
+  }
+
+  &.disabled {
+    color: shade($color-light, 20%);
   }
 }
 
