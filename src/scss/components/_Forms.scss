@@ -319,13 +319,15 @@ select[data-ss-uuid] {
     padding: .6rem 1rem;
 
     &::after {
-      color: transparent-dark(.26);
-      content: '\F140';
+      background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+') no-repeat right .75rem center;
+      bottom: 0;
+      content: '';
       display: block;
-      font: normal normal normal 20px/1 'Material Design Icons';
+      left: 0;
+      opacity: .4;
       position: absolute;
-      right: 2%;
-      top: 26%;
+      right: 0;
+      top: 0;
     }
   }
 
